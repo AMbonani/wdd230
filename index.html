@@ -14,10 +14,10 @@
     <meta property="og:image" content="https://stock.adobe.com/za/search?k=pretoria%20city">
     <meta property="og:url" content="https://www.holidify.com/places/pretoria/photos.html">
 
-    
     <link rel="stylesheet" href="styles/normalize.css">
 
-   
+    
+
     <link rel="stylesheet" href="https://codepen.io/blazzard-jason/pen/BaOwMvg">
 
 </head>
@@ -27,6 +27,8 @@
     <header>
         <img src="pretoria.PNG" alt="Pretoria">
         <h1 id="fullName">Abigail Maimela</h1>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+       
     </header>
 
     <nav>
@@ -63,10 +65,17 @@
     </footer>
 
     <script src="getDates.js"></script>
-
     <script>
         document.getElementById('fullName').innerText = 'Abigail Maimela';
         document.getElementById('footerFullName').innerText = 'Abigail Maimela';
+
+       
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const mainElement = document.querySelector('main');
+
+        darkModeToggle.addEventListener('click', () => {
+            mainElement.classList.toggle('dark-mode');
+        });
     </script>
 
 </body>
