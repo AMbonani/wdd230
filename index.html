@@ -43,7 +43,13 @@
     </nav>
 
     <main>
-        <h2>WDD 230: Web Frontend Development</h2>
+        
+        <picture class="hero-image">
+            <source srcset="images/atlanta2.webp" media="(max-width: 400px)">
+            <source srcset="images/atlantatemple.webp" media="(max-width: 960px)">
+            <img src="images/atlantatemple.webp" alt="Favorite Temple Image">
+            <div class="overlay">Atlanta Temple</div>
+        </picture>
 
         <section class="card">
             <h3>Learning Activities</h3>
@@ -56,7 +62,7 @@
         <section class="card">
             <h3>Information</h3>
             <p>Weather: [Weather Placeholder]</p>
-            <p>Visits: [Visits Placeholder]</p>
+            <p>Visits: <span id="visitCounter">0</span></p>
         </section>
 
         <section class="webp-image">
@@ -65,6 +71,9 @@
             <p><a href="week03/images/landscape.webp">WebP</a></p>
         </section>
     </main>
+
+    
+    <iframe src="https://www.google.com/maps/place/Pretoria/@-25.75865,28.1979505,11z/data=!3m1!4b1!4m6!3m5!1s0x1e95619cbec65033:0xf66262b07a847b4c!8m2!3d-25.7478676!4d28.2292712!16zL20vMDY3ejQ?entry=ttu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
     <footer>
         <p>&copy; <span id="currentYear"></span> <span id="footerFullName">Abigail Maimela</span> [South Africa]</p>
@@ -82,9 +91,18 @@
         darkModeToggle.addEventListener('click', () => {
             mainElement.classList.toggle('dark-mode');
         });
+
+        
+        const visitCounter = document.getElementById('visitCounter');
+        let visits = localStorage.getItem('visits') || 0;
+        visits = parseInt(visits);
+        visits++;
+        localStorage.setItem('visits', visits.toString());
+        visitCounter.textContent = visits;
     </script>
 
 </body>
 
 </html>
+
 
