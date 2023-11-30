@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lazy Load</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/lazyload.css">
 </head>
 
 <body>
@@ -15,12 +15,14 @@
     </header>
 
     <main>
-        <img src="images/eveningfall.jpg" alt="Evening Fall" width="400" height="200">
-        <img src="images/majestic.jpg" alt="Majestic"width="400" height="200">
-        <img src="images/morningray.jpg"  alt="Morning Ray" width="400" height="200">
-        <img src="images/reflections.jpg"  alt="Reflections"width="400" height="200">
-        <img src="images/solacejpg.jpg" alt="Solace"width="400" height="200">
-        <img src="images/spring.jpg" alt="Spring"width="400" height="200">
+        <div class="image-container">
+            <img src="images/eveningfall.jpg" alt="eveningfall" loading="lazy" width="400" height="600">
+            <img src="images/majestic.jpg" alt="Majestic" loading="lazy" width="400" height="600">
+            <img src="images/morningray.jpg" alt="Morning Ray" loading="lazy" width="400" height="600">
+            <img src="images/reflections.jpg" alt="Reflections" loading="lazy" width="400" height="600">
+            <img src="images/solacejpg.jpg" alt="Solace" loading="lazy" width="400" height="600">
+            <img src="images/spring.jpg" alt="Spring" loading="lazy" width="400" height="600">
+        </div>
     </main>
 
     <footer>
@@ -31,15 +33,20 @@
             </div>
             <div class="footer-right">
                 <p>Last Modified: <span id="lastModified"></span></p>
+                <a href="index.html">Homepage</a>
             </div>
         </div>
-
-        <script>
-            document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
-        </script>
     </footer>
 
+    <script defer src="script/lazyload.js"></script>
+    <script defer src="script/fadeInAnimation.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+
 
