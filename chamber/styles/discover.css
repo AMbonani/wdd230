@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr; /* Single column layout for mobile view */
+    grid-template-columns: 1fr; 
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -11,13 +11,13 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Adjust the column widths as needed */
+    grid-template-columns: 1fr 2fr; 
 }
 
 .sidebar {
-    background-color: #c32e2e; /* Sidebar background color */
-    color: #fff; /* Text color in the sidebar */
-    padding: 20px; /* Adjust as needed */
+    background-color: #602ec3; 
+    color: #fff; 
+    padding: 20px; 
 }
 
 .sidebar h2 {
@@ -40,11 +40,11 @@ img {
     animation: fadeIn 1.5s ease-in-out forwards;
     will-change: opacity;
     margin-bottom: 20px;
-    transition: transform 0.3s; /* Adding a transition effect */
+    transition: transform 0.3s; 
 }
 
 img:hover {
-    transform: scale(1.1); /* Sample hover effect: scale the image on hover */
+    transform: scale(1.1); 
 }
 
 @keyframes fadeIn {
