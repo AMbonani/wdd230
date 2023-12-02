@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="styles/normalize.css">
 
     <link rel="stylesheet" href="https://codepen.io/blazzard-jason/pen/BaOwMvg">
-
 </head>
 
 <body>
@@ -31,48 +30,53 @@
     <nav>
         <ul>
             <li><a href="home">Home</a></li>
-            <li><a href="chamber">Chamber</a></li>
+            <li><a href="wdd230/chamber.css">Chamber</a></li>
             <li><a href="siteplan">Site Plan</a></li>
             <li><a href="form">Form</a></li>
             <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng">Book of Mormon App</a></li>
             <li><a href="week03/lazyload.html">Lazy Load</a></li>
             <li><a href="week03/responsive-images.html">responsive-images</a></li>
-            
+
             <li><a href="bom3.html">Book of Mormon 3</a></li>
         </ul>
     </nav>
 
     <main>
-        
-        <picture class="hero-image">
-            <source srcset="images/atlanta2.webp" media="(max-width: 400px)">
-            <source srcset="images/atlantatemple.webp" media="(max-width: 960px)">
-            <img src="images/atlantatemple.webp" alt="Favorite Temple Image">
-            <div class="overlay">Atlanta Temple</div>
-        </picture>
+        <div class="container">
+            <div class="sidebar" id="sidebarContent">
+             
+            </div>
 
-        <section class="card">
-            <h3>Learning Activities</h3>
-            <ul>
-                <li><a href="#">Activity 1</a></li>
-                <li><a href="#">Activity 2</a></li>
-            </ul>
-        </section>
-
-        <section class="card">
-            <h3>Information</h3>
-            <p>Weather: [Weather Placeholder]</p>
-            <p>Visits: <span id="visitCounter">0</span></p>
-        </section>
-
-        <section class="webp-image">
-            <h3>WebP Image</h3>
-            <img src="week03/images/landscape2.webp" alt="WebP Landscape">
-            <p><a href="week03/images/landscape.webp">WebP</a></p>
-        </section>
+            <div class="photo-gallery">
+                
+                <figure>
+                    <img src="images/freedom-park.webp" alt="freedom-park" loading="lazy">
+                    <figcaption>Freedom Park</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/Pretoria-Zoo.webp" alt="Pretoria-Zoo" loading="lazy">
+                    <figcaption>Pretoria Zoo</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/transvaal-museum.webp" alt="transvaal-museum" loading="lazy">
+                    <figcaption>Transvaal Museum</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/unionhoreseman.webp" alt="unionhoreseman" loading="lazy">
+                    <figcaption>Union Horseman</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/unionbuildings.webp" alt="unionbuildings" loading="lazy">
+                    <figcaption>Union Buildings</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/voortrekker-monument.webp" alt="voortrekker-monument" loading="lazy">
+                    <figcaption>Voortrekker Monument</figcaption>
+                </figure>
+            </div>
+        </div>
     </main>
 
-    
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.406274012599!2d28.2292712!3d-25.7478676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95619cbec65033%3A0xf66262b07a847b4c!2sPretoria!5e0!3m2!1sen!2sza!4v1651869176069!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
 
@@ -82,25 +86,10 @@
     </footer>
 
     <script src="getDates.js"></script>
-    <script>
-        document.getElementById('fullName').innerText = 'Abigail Maimela';
-        document.getElementById('footerFullName').innerText = 'Abigail Maimela';
+    <script src="script.js"></script>
 
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const mainElement = document.querySelector('main');
-
-        darkModeToggle.addEventListener('click', () => {
-            mainElement.classList.toggle('dark-mode');
-        });
-
-        
-        const visitCounter = document.getElementById('visitCounter');
-        let visits = localStorage.getItem('visits') || 0;
-        visits = parseInt(visits);
-        visits++;
-        localStorage.setItem('visits', visits.toString());
-        visitCounter.textContent = visits;
-    </script>
+   
+    <link rel="stylesheet" href="styles/discover.css">
 
 </body>
 
