@@ -1,8 +1,10 @@
+
+
 body {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -11,13 +13,23 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: 1fr 2fr; 
+    grid-template-columns: 1fr 2fr;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr; 
+
+    
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr); 
+    }
 }
 
 .sidebar {
-    background-color: #602ec3; 
-    color: #fff; 
-    padding: 20px; 
+    background-color: #602ec3;
+    color: #fff;
+    padding: 20px;
 }
 
 .sidebar h2 {
@@ -40,11 +52,11 @@ img {
     animation: fadeIn 1.5s ease-in-out forwards;
     will-change: opacity;
     margin-bottom: 20px;
-    transition: transform 0.3s; 
+    transition: transform 0.3s;
 }
 
 img:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 @keyframes fadeIn {
