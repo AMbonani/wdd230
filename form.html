@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+
+    <header>
+        <img src="images/pretoria.PNG" alt="WebP Landscape">
+        <h1 id="fullName">Abigail Maimela</h1>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home">Home</a></li>
+            <li><a href="chamber">Chamber</a></li>
+            <li><a href="siteplan">Site Plan</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng">Book of Mormon App</a></li>
+            <li><a href="week03/lazyload.html">Lazy Load</a></li>
+            <li><a href="week03/responsive-images.html">responsive-images</a></li>
+            <li><a href="bom3.html">Book of Mormon 3</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <form action="record.html" method="get">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" pattern="[a-zA-Z0-9]+" title="Must be alpha-numeric and at least 8 characters long" required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" pattern="[a-zA-Z0-9]+" title="Must be alpha-numeric and at least 8 characters long" required oninput="checkPasswordMatch()">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid email address">
+
+            <label for="pageRating">Page Rating:</label>
+            <input type="range" id="pageRating" name="pageRating" min="1" max="10" step="1" oninput="updatePageRating()">
+            <span id="pageRatingValue">1</span>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> <span id="footerFullName">Abigail Maimela</span> [South Africa]</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/form.js"></script>
+</body>
+</html>
