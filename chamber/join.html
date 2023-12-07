@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abigail Maimela - WDD 230 - Web Frontend Development</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development. Abigail Maimela's course assignment portal. Learn about web development and more.">
+    <meta name="author" content="Abigail Maimela">
+    <link rel="icon" href="favicon.ico">
+
+    <meta property="og:title" content="Abigail Maimela - Web Frontend Development">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://stock.adobe.com/za/search?k=pretoria%20city">
+    <meta property="og:url" content="https://www.holidify.com/places/pretoria/photos.html">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+
+    <link rel="stylesheet" href="https://codepen.io/blazzard-jason/pen/BaOwMvg">
+
+</head>
+
+<body>
+
+    <header>
+        <img src="images/pretoria.PNG" alt="WebP Landscape">
+        <h1 id="fullName">Abigail Maimela</h1>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home">Home</a></li>
+            <li><a href="chamber">Chamber</a></li>
+            <li><a href="siteplan">Site Plan</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng">Book of Mormon App</a></li>
+            <li><a href="week03/lazyload.html">Lazy Load</a></li>
+            <li><a href="week03/responsive-images.html">responsive-images</a></li>
+            <li><a href="bom3.html">Book of Mormon 3</a></li>
+        </ul>
+    </nav>
+
+
+    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.406274012599!2d28.2292712!3d-25.7478676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95619cbec65033%3A0xf66262b07a847b4c!2sPretoria!5e0!3m2!1sen!2sza!4v1651869176069!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> <span id="footerFullName">Abigail Maimela</span> [South Africa]</p>
+        <p id="lastModified"></p>
+        
+    </footer>
+
+    <script src="scripts/getdates.js"></script>
+    <script>
+        document.getElementById('fullName').innerText = 'Abigail Maimela';
+        document.getElementById('footerFullName').innerText = 'Abigail Maimela';
+
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const mainElement = document.querySelector('main');
+
+        darkModeToggle.addEventListener('click', () => {
+            mainElement.classList.toggle('dark-mode');
+        });
+
+        
+        const visitCounter = document.getElementById('visitCounter');
+        let visits = localStorage.getItem('visits') || 0;
+        visits = parseInt(visits);
+        visits++;
+        localStorage.setItem('visits', visits.toString());
+        visitCounter.textContent = visits;
+    </script>
+
+</body>
+
+</html>
