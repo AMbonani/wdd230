@@ -1,0 +1,32 @@
+[
+    {
+        "familyName": "leo",
+        "moveInDate": "2024-02-15",
+        "numberOfPeople": 4,
+        "visitedByBishopric": true,
+        "familyMembers": [
+            {
+                "name": "Kyle leo",
+                "gender": "Male",
+                "birthdate": "1971-08-13"
+            },
+            {
+                "name": "Abby Leo",
+                "gender": "Female",
+                "birthdate": "1985-06-18"
+            },
+            {
+                "name": "Sol Leo",
+                "gender": "Female",
+                "birthdate": "2015-10-23"
+            },
+            {
+                "name": "Kane Leo",
+                "gender": "Male",
+                "birthdate": "2021-11-25"
+            }
+        ]
+    }
+]
+
+ 
