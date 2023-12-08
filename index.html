@@ -18,10 +18,6 @@
 
     <link rel="stylesheet" href="https://codepen.io/blazzard-jason/pen/BaOwMvg">
     <link rel="stylesheet" href="https://codepen.io/AMbonani/pen/wvNOBjE">
-    <link rel="week05" href="https://github.com/AMbonani/wdd230/blob/main/week05/new-ward-members.json">
-    
-    
-
 </head>
 
 <body>
@@ -47,7 +43,6 @@
     </nav>
 
     <main>
-        
         <picture class="hero-image">
             <source srcset="images/atlanta2.webp" media="(max-width: 400px)">
             <source srcset="images/atlantatemple.webp" media="(max-width: 960px)">
@@ -63,11 +58,9 @@
                 <section class="card">
                     <h3>Learning Activities</h3>
                     <ul>
-                       
                         <li><a href="week04/images/combinators.PNG">w3schools Combinator Exercises</a></li>
                     </ul>
                 </section>
-                
             </ul>
         </section>
 
@@ -82,16 +75,19 @@
             <img src="week03/images/landscape2.webp" alt="WebP Landscape">
             <p><a href="week03/images/landscape.webp">WebP</a></p>
         </section>
+
+        
+        <section class="card">
+            <h3>Ward Members</h3>
+            <pre id="wardMembers"></pre>
+        </section>
     </main>
 
-    
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.406274012599!2d28.2292712!3d-25.7478676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95619cbec65033%3A0xf66262b07a847b4c!2sPretoria!5e0!3m2!1sen!2sza!4v1651869176069!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
 
     <footer>
         <p>&copy; <span id="currentYear"></span> <span id="footerFullName">Abigail Maimela</span> [South Africa]</p>
         <p id="lastModified"></p>
-        
     </footer>
 
     <script src="scripts/getdates.js"></script>
@@ -106,17 +102,26 @@
             mainElement.classList.toggle('dark-mode');
         });
 
-        
         const visitCounter = document.getElementById('visitCounter');
         let visits = localStorage.getItem('visits') || 0;
         visits = parseInt(visits);
         visits++;
         localStorage.setItem('visits', visits.toString());
         visitCounter.textContent = visits;
+
+        
+        fetch('https://raw.githubusercontent.com/AMbonani/wdd230/main/week05/new-ward-members.json')
+            .then(response => response.json())
+            .then(data => {
+                const wardMembersElement = document.getElementById('wardMembers');
+                wardMembersElement.innerText = JSON.stringify(data, null, 2);
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
     </script>
 
 </body>
 
 </html>
+
 
 
