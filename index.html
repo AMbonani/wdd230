@@ -34,6 +34,13 @@
             <li><a href="chamber">Chamber</a></li>
             <li><a href="siteplan">Site Plan</a></li>
             <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng">Book of Mormon App</a></li>
+            <!-- Dynamic Learning Activities Section -->
+            <li><a href="#">Learning Activities</a>
+                <ul id="learning-activities">
+                    <!-- Dynamic links will be inserted here -->
+                </ul>
+            </li>
+            <!-- End Dynamic Learning Activities Section -->
             <li><a href="week03/lazyload.html">Lazy Load</a></li>
             <li><a href="week03/responsive-images.html">responsive-images</a></li>
             <li><a href="week04/tablebuild.html">table Build</a></li>
@@ -55,14 +62,9 @@
         <section class="card">
             <h3>Learning Activities</h3>
             <ul>
+                <!-- Existing static links -->
                 <li><a href="https://codepen.io/marcobiedermann/pen/nbpKWV">codepen</a></li>
                 <li><a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_combinators4">w3schools</a></li>
-                <section class="card">
-                    <h3>Learning Activities</h3>
-                    <ul>
-                        <li><a href="week04/images/combinators.PNG">w3schools Combinator Exercises</a></li>
-                    </ul>
-                </section>
             </ul>
         </section>
 
@@ -72,16 +74,14 @@
             <p id="condition">Condition: Loading...</p>
             <img id="weatherIcon" alt="Weather Icon">
             <p>Visits: <span id="visitCounter">0</span></p>
-          </section>
-          
-        
+        </section>
+
         <section class="webp-image">
             <h3>WebP Image</h3>
             <img src="week03/images/landscape2.webp" alt="WebP Landscape">
             <p><a href="week03/images/landscape.webp">WebP</a></p>
         </section>
 
-        
         <section class="card">
             <h3>Ward Members</h3>
             <pre id="wardMembers"></pre>
@@ -97,7 +97,8 @@
 
     <script src="scripts/getdates.js"></script>
     <script src="scripts/weather.js"></script>
-     
+    <script src="scripts/links.js"></script>
+
     <script>
         document.getElementById('fullName').innerText = 'Abigail Maimela';
         document.getElementById('footerFullName').innerText = 'Abigail Maimela';
@@ -116,7 +117,6 @@
         localStorage.setItem('visits', visits.toString());
         visitCounter.textContent = visits;
 
-        
         fetch('https://raw.githubusercontent.com/AMbonani/wdd230/main/week05/new-ward-members.json')
             .then(response => response.json())
             .then(data => {
@@ -129,8 +129,6 @@
 </body>
 
 </html>
-
-
 
 
 

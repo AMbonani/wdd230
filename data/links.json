@@ -1,0 +1,70 @@
+{
+    "weeks": [
+      {
+        "week": "Week 1",
+        "links": [
+          {
+            "url": "week01/holygrail.html",
+            "title": "HG Layout"
+          },
+          {
+            "url": "week01/media-query.html",
+            "title": "mQueries"
+          }
+        ]
+      },
+      {
+        "week": "Week 2",
+        "links": [
+          {
+            "url": "week02/flexbox.html",
+            "title": "Flexbox"
+          },
+          {
+            "url": "week02/css-grid.html",
+            "title": "CSS Grid"
+          }
+        ]
+      },
+      {
+        "week": "Week 3",
+        "links": [
+          {
+            "url": "week03/lazyload.html",
+            "title": "Lazy Load"
+          },
+          {
+            "url": "week03/responsive-images.html",
+            "title": "Responsive Images"
+          }
+        ]
+      },
+      {
+        "week": "Week 4",
+        "links": [
+          {
+            "url": "week04/form-start.html",
+            "title": "Table Build"
+          },
+          {
+            "url": "week04/form-start.html",
+            "title": "Form Start"
+          }
+        ]
+      },
+      {
+        "week": "Week 5",
+        "links": [
+          {
+            "url": "week05/prophets.html",
+            "title": "Prophets"
+          },
+          {
+            "url": "week05/weather.html",
+            "title": "Weather"
+          }
+        ]
+      }
+    ]
+  }
+  
