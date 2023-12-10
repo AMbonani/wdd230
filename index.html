@@ -68,10 +68,13 @@
 
         <section class="card">
             <h3>Information</h3>
-            <p>Weather: [Weather Placeholder]</p>
+            <p id="temperature">Temperature: Loading...</p>
+            <p id="condition">Condition: Loading...</p>
+            <img id="weatherIcon" alt="Weather Icon">
             <p>Visits: <span id="visitCounter">0</span></p>
-        </section>
-
+          </section>
+          
+        
         <section class="webp-image">
             <h3>WebP Image</h3>
             <img src="week03/images/landscape2.webp" alt="WebP Landscape">
@@ -93,6 +96,8 @@
     </footer>
 
     <script src="scripts/getdates.js"></script>
+    <script src="scripts/weather.js"></script>
+     
     <script>
         document.getElementById('fullName').innerText = 'Abigail Maimela';
         document.getElementById('footerFullName').innerText = 'Abigail Maimela';
@@ -124,6 +129,8 @@
 </body>
 
 </html>
+
+
 
 
 

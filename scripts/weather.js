@@ -1,6 +1,6 @@
-const currentTemp = document.querySelector('#current-temp');
-const weatherIcon = document.querySelector('#weather-icon');
-const captionDesc = document.querySelector('figcaption');
+const currentTemp = document.getElementById('temperature');
+const weatherIcon = document.getElementById('weatherIcon');
+const captionDesc = document.getElementById('condition');
 
 const url = 'https://api.openweathermap.org/data/2.5/weather';
 
@@ -30,13 +30,14 @@ async function apiFetch() {
 apiFetch();
 
 function displayResults(data) {
-  currentTemp.innerHTML = `${data.main.temp}&deg;F`;
-
-  const iconCode = data.weather[0].icon;
-  const iconsrc = `https://openweathermap.org/img/w/${iconCode}.png`;
-
-  weatherIcon.setAttribute('src', iconsrc);
-  weatherIcon.setAttribute('alt', data.weather[0].description);
-
-  captionDesc.textContent = `${data.weather[0].description}`;
-}
+    currentTemp.innerHTML = `${data.main.temp}&deg;F`;
+  
+    const iconCode = data.weather[0].icon;
+    const iconUrl = `https://openweathermap.org/img/w/${iconCode}.png`;
+  
+    weatherIcon.setAttribute('src', iconUrl);
+    weatherIcon.setAttribute('alt', data.weather[0].description);
+  
+    captionDesc.textContent = `${data.weather[0].description}`;
+  }
+  
