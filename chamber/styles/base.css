@@ -107,3 +107,12 @@ nav a {
     color: #333;
     font-size: 14px;
 }
+
+
+/* Add this to your existing styles */
+.list-view .member-card {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
