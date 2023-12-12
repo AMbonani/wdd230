@@ -14,20 +14,20 @@
         ]
       },
       {
-        "week": "Week 2",
+        "week": "Week 02",
         "links": [
           {
-            "url": "week02/flexbox.html",
-            "title": "Flexbox"
+            "url": "week02/design.html",
+            "title": "Design"
           },
           {
-            "url": "week02/css-grid.html",
-            "title": "CSS Grid"
+            "url": "week02/bom.html",
+            "title": "BOM"
           }
         ]
       },
       {
-        "week": "Week 3",
+        "week": "Week 03",
         "links": [
           {
             "url": "week03/lazyload.html",
@@ -43,7 +43,7 @@
         "week": "Week 4",
         "links": [
           {
-            "url": "week04/form-start.html",
+            "url": "week04/tablebuild",
             "title": "Table Build"
           },
           {
