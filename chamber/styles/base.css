@@ -1,11 +1,14 @@
+/* Reset styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f8f8; /* Light gray background color */
     color: #333; /* Dark gray text color */
+    font-size: 16px; /* Base font size */
 }
 
+/* Header styles */
 header {
     background-color: #1a1a1a; /* Dark background color for the header */
     color: #fff; /* White text color */
@@ -34,57 +37,73 @@ nav a {
     padding: 10px;
 }
 
-main {
+/* Add responsive navigation styles */
+.menu-toggle {
+    display: none; /* Hide by default on larger screens */
+}
+
+nav {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+nav ul {
+    display: none; /* Hide the navigation items by default */
+}
+
+nav a {
+    padding: 15px; /* Increase padding for better touch interaction */
+}
+
+.menu-toggle:checked + nav ul {
+    display: flex;
+}
+
+/* Content section styles */
+.content {
     padding: 20px;
     background-color: #fff; /* White background color for the main content */
     border-radius: 5px; /* Rounded corners for a cleaner look */
 }
 
-form {
+/* Add the rest of your existing styles below this line */
+
+/* Add your grid styles for the discover section */
+.container {
     display: grid;
-    gap: 15px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "sidebar"
+        "photo-gallery";
 }
 
-label {
-    font-weight: bold;
-    color: #333; /* Dark gray text color for labels */
-}
-
-input,
-textarea,
-select {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    background-color: #f2f2f2; /* Light gray background color for input fields */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 3px; /* Rounded corners for input fields */
-}
-
-button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    border: none; /* Remove button border */
-    border-radius: 3px; /* Rounded corners for the button */
-}
-
-button:hover {
-    background-color: #555;
-}
-
-#membershipBenefits {
-    margin-top: 20px;
+.sidebar {
+    grid-area: sidebar;
     background-color: #f0f0f0;
     padding: 20px;
-    border-radius: 5px; /* Rounded corners for the benefits section */
 }
 
-@media screen and (max-width: 600px) {
-    form {
-        grid-template-columns: 1fr;
-    }
+.photo-gallery {
+    grid-area: photo-gallery;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.photo-gallery figure {
+    margin: 0;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.photo-gallery figcaption {
+    text-align: center;
+    margin-top: 8px;
+    color: #333;
+    font-size: 14px;
 }

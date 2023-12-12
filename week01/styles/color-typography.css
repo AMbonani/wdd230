@@ -1,0 +1,34 @@
+/* Color Schema styles */
+.color-schema {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.color-schema h3 {
+    color: #3498db;
+}
+
+.color-schema p {
+    color: #2ecc71;
+}
+
+/* Typography styles */
+.typography {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.typography h3 {
+    color: #3498db;
+}
+
+.typography p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+.typography p:last-child {
+    font-family: 'Open Sans', sans-serif;
+}

@@ -1,0 +1,62 @@
+/* larger.css */
+
+/* Adjustments for larger screens */
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 18px; /* Adjust the base font size for larger screens */
+    }
+
+    header {
+        padding: 20px; /* Increase padding in the header for larger screens */
+    }
+
+    nav ul {
+        flex-direction: row; /* Display navigation items horizontally */
+    }
+
+    nav a {
+        padding: 15px; /* Increase padding for navigation items */
+    }
+
+    main {
+        margin: 20px; /* Add margin to the main content for larger screens */
+    }
+
+    .hero {
+        padding: 30px; /* Increase padding for the hero section */
+    }
+
+    .hero img {
+        max-width: 100%; /* Make sure the image does not exceed its container */
+        height: auto; /* Maintain the image's aspect ratio */
+    }
+
+    .hero h2 {
+        font-size: 36px; /* Increase font size for the hero title */
+        text-align: center; /* Center-align the title */
+    }
+
+    .hero p {
+        text-align: center; /* Center-align paragraphs in the hero section */
+    }
+
+    .cta {
+        font-size: 20px; /* Increase font size for the call-to-action section */
+    }
+
+    .events,
+    .weather,
+    .spotlights {
+        margin: 20px; /* Add margin to these sections for larger screens */
+    }
+
+    .spotlight {
+        padding: 20px; /* Increase padding for individual spotlights */
+    }
+
+    footer {
+        padding: 20px; /* Increase padding in the footer for larger screens */
+    }
+}
+
+
