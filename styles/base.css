@@ -1,20 +1,27 @@
 
-body, h1, h2, h3, p, ul {
+body,
+h1,
+h2,
+h3,
+p,
+ul {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f8f8f8;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 header {
     text-align: center;
     padding: 20px;
-    background-color: #4CAF50; 
+    background-color: #4CAF50;
     color: white;
 }
 
@@ -39,8 +46,8 @@ nav a {
 }
 
 main {
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 100%;
+    margin: 20px 10px;
 }
 
 .card {
@@ -57,7 +64,6 @@ footer {
     color: white;
 }
 
-
 a {
     color: #007BFF;
 }
@@ -66,5 +72,47 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Additional styles for Learning Activities Section */
+#learning-activities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+.week {
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 600px;
+    width: 100%;
+}
+
+.week-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.week-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.week-links a {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Existing styles */
+
+@media (max-width: 668px) {
+    .week-links {
+        flex-direction: column;
+    }
+
+    .week-links a {
+        margin-right: 0;
+        margin-bottom: 5px;
+        display: block; /* Ensures each link takes full width */
+    }
+}
