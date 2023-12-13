@@ -1,61 +1,59 @@
-/* larger.css */
 
-/* Adjustments for larger screens */
 @media screen and (min-width: 768px) {
     body {
-        font-size: 18px; /* Adjust the base font size for larger screens */
+        font-size: 18px; 
     }
 
     header {
-        padding: 20px; /* Increase padding in the header for larger screens */
+        padding: 20px; 
     }
 
     nav ul {
-        flex-direction: row; /* Display navigation items horizontally */
+        flex-direction: row; 
     }
 
     nav a {
-        padding: 15px; /* Increase padding for navigation items */
+        padding: 15px; 
     }
 
     main {
-        margin: 20px; /* Add margin to the main content for larger screens */
+        margin: 20px; 
     }
 
     .hero {
-        padding: 30px; /* Increase padding for the hero section */
+        padding: 30px; 
     }
 
     .hero img {
-        max-width: 100%; /* Make sure the image does not exceed its container */
-        height: auto; /* Maintain the image's aspect ratio */
+        max-width: 100%; 
+        height: auto; 
     }
 
     .hero h2 {
-        font-size: 36px; /* Increase font size for the hero title */
-        text-align: center; /* Center-align the title */
+        font-size: 36px; 
+        text-align: center; 
     }
 
     .hero p {
-        text-align: center; /* Center-align paragraphs in the hero section */
+        text-align: center; 
     }
 
     .cta {
-        font-size: 20px; /* Increase font size for the call-to-action section */
+        font-size: 20px; 
     }
 
     .events,
     .weather,
     .spotlights {
-        margin: 20px; /* Add margin to these sections for larger screens */
+        margin: 20px; 
     }
 
     .spotlight {
-        padding: 20px; /* Increase padding for individual spotlights */
+        padding: 20px; 
     }
 
     footer {
-        padding: 20px; /* Increase padding in the footer for larger screens */
+        padding: 20px; 
     }
 }
 
