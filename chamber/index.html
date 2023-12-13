@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +9,21 @@
     <meta name="author" content="Abigail Maimela">
     <title>The Pretoria Chamber of Commerce</title>
     <link rel="icon" type="image/png" href="faviconchamber.ico">
-    
+
     <meta property="og:title" content="Chamber Site">
     <meta property="og:type" content="website">
     <meta property="og:image" content="image.jpg">
     <meta property="og:url" content="https://chambersite.com">
 
-    
     <link rel="stylesheet" href="larger.css">
+    <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="chamber/base.css">
 </head>
+
 <body>
-    
+
     <header>
-        <h1>Your Chamber</h1>
+        <h1>The Pretoria Chamber of Commerce</h1>
         <nav>
             <ul>
                 <li><a href="/index.html">Home</a></li>
@@ -78,5 +80,28 @@
         <p>&copy; <span id="currentYear"></span> <span id="footerFullName">Abigail Maimela</span> [South Africa]</p>
         <p id="lastModified"></p>
     </footer>
+
+    <script src="scripts/weather.js"></script>
+    <script>
+        async function fetchWeatherData() {
+            try {
+                const response = await fetch('https://api.weatherapi.com/v1/current.json?key=77bf00e20f235f8f556baa0e89701021=pretoria');
+                const weatherData = await response.json();
+
+                document.getElementById('temperature').textContent = `Temperature: ${weatherData.current.temp_c}°C`;
+                document.getElementById('condition').textContent = `Condition: ${weatherData.current.condition.text}`;
+                document.getElementById('weatherIcon').src = `https:${weatherData.current.condition.icon}`;
+            } catch (error) {
+                console.error('Error fetching weather data:', error);
+            }
+        }
+
+        updateView();
+
+        function updateView() {
+            fetchWeatherData();
+        }
+    </script>
 </body>
+
 </html>
