@@ -72,7 +72,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Additional styles for Learning Activities Section */
+
 #learning-activities {
     display: flex;
     flex-direction: column;
@@ -103,7 +103,7 @@ a:hover {
     color: #333;
 }
 
-/* Existing styles */
+
 
 @media (max-width: 668px) {
     .week-links {
@@ -113,6 +113,6 @@ a:hover {
     .week-links a {
         margin-right: 0;
         margin-bottom: 5px;
-        display: block; /* Ensures each link takes full width */
+        display: block; 
     }
 }
