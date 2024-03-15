@@ -1,7 +1,7 @@
-/* Import Google Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
-/* General Styles */
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -10,7 +10,7 @@ body {
     background-color: #f8f8f8;
 }
 
-/* Header Styles */
+
 header {
     background-color: #2c3e50;
     color: #fff;
@@ -33,7 +33,7 @@ header span {
     font-size: 1.2rem;
 }
 
-/* Navigation Styles */
+
 nav {
     background-color: #e67e22;
     padding: 10px;
@@ -53,7 +53,7 @@ nav a:hover {
     background-color: #d35400;
 }
 
-/* Main Content Styles */
+
 main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -89,7 +89,7 @@ li a:hover {
     color: #d35400;
 }
 
-/* Footer Styles */
+
 footer {
     background-color: #2c3e50;
     color: #fff;
@@ -106,12 +106,12 @@ footer img {
     margin-left: 5px;
 }
 
-/* Media Queries for Responsive Design */
+
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
     }
     .card {
-        width: 100%; /* Adjust width to fit small devices */
+        width: 100%; 
     }
 }
