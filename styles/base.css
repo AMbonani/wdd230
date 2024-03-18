@@ -94,4 +94,13 @@ footer {
 footer p:first-child {
     margin-bottom: 10px;
 }
+button {
+    background-color: orange;
+    color: black; 
+}
+
+button:hover {
+    background-color: red;
+    color: white; 
+}
 
