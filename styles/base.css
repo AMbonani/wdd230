@@ -109,7 +109,7 @@ footer img {
     }
 }
 
-
+/* New styles for hero image container and overlay */
 .hero-image-container {
     position: relative;
 }
@@ -123,4 +123,8 @@ footer img {
     padding: 10px 20px; 
     border-radius: 5px; 
     white-space: nowrap; 
+    max-width: 80%; 
+    text-align: center; 
 }
+
+
