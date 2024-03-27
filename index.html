@@ -1,3 +1,5 @@
+https://codepen.io/AMbonani/pen/wvNOBjE
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +34,7 @@
 
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="home">Home</a></li>
             <li><a href="chamber">Chamber</a></li>
             <li><a href="week01/chamber-site-plan.html">Site plan</a></li>
             <li><a href="form.html">form</a></li>
@@ -40,12 +42,12 @@
     </nav>
 
     <main>
-        <figure class="hero-image">
+        <picture class="hero-image">
             <source srcset="images/atlanta2.webp" media="(max-width: 400px)">
             <source srcset="images/atlantatemple.webp" media="(max-width: 960px)">
             <img src="images/atlantatemple.webp" alt="Favorite Temple Image">
-            <figcaption class="overlay">Atlanta Temple</figcaption>
-        </figure>
+            <div class="overlay">Atlanta Temple</div>
+        </picture>
 
         <section class="card">
             <h3>Learning Activities</h3>
@@ -69,11 +71,60 @@
             <h3>Information</h3>
             <p id="temperature">Temperature: Loading...</p>
             <p id="condition">Condition: Loading...</p>
-            <img id="weatherIcon" src="" alt="Weather Icon">
+            <img id="weatherIcon" alt="Weather Icon">
             <p>Visits: <span id="visitCounter">0</span></p>
         </section>
 
         <section class="webp-image">
             <h3>WebP Image</h3>
-            <img src="week03
+            <img src="week03/images/landscape2.webp" alt="WebP Landscape">
+            <p><a href="week03/images/landscape.webp">WebP</a></p>
+        </section>
 
+        <section class="card">
+            <h3>Ward Members</h3>
+            <pre id="wardMembers"></pre>
+        </section>
+    </main>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.406274012599!2d28.2292712!3d-25.7478676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95619cbec65033%3A0xf66262b07a847b4c!2sPretoria!5e0!3m2!1sen!2sza!4v1651869176069!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> <span id="footerFullName">Abigail Maimela</span> [South Africa]</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/links.js"></script>
+
+    <script>
+        document.getElementById('fullName').innerText = 'Abigail Maimela';
+        document.getElementById('footerFullName').innerText = 'Abigail Maimela';
+
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const mainElement = document.querySelector('main');
+
+        darkModeToggle.addEventListener('click', () => {
+            mainElement.classList.toggle('dark-mode');
+        });
+
+        const visitCounter = document.getElementById('visitCounter');
+        let visits = localStorage.getItem('visits') || 0;
+        visits = parseInt(visits);
+        visits++;
+        localStorage.setItem('visits', visits.toString());
+        visitCounter.textContent = visits;
+
+        fetch('https://raw.githubusercontent.com/AMbonani/wdd230/main/week05/new-ward-members.json')
+            .then(response => response.json())
+            .then(data => {
+                const wardMembersElement = document.getElementById('wardMembers');
+                wardMembersElement.innerText = JSON.stringify(data, null, 2);
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
+    </script>
+
+</body>
+
+</html>
