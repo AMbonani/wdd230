@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="../styles/form.css">
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/larger.css">
+    <link rel="stylesheet" href="../chamber/base.css"> <!-- Added the chamber-specific CSS -->
 </head>
 
 <body>
 
     <header>
-        <img src="../images/pretoria.PNG" alt="WebP Landscape">
-        <h1 id="fullName">Abigail Maimela</h1>
+        <img src="../images/pretoria.PNG" alt="WebP Landscape"> <!-- Updated image source -->
+        <h1 id="fullName">The Pretoria Chamber of Commerce</h1> <!-- Updated chamber name -->
         <button id="darkModeToggle">Toggle Dark Mode</button>
     </header>
 
@@ -22,7 +23,7 @@
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="chamber">Chamber</a></li>
-            <li><a href="siteplan">Site Plan</a></li>
+            <li><a href="../siteplan">Site Plan</a></li>
             <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng">Book of Mormon App</a></li>
             <li><a href="../week03/lazyload.html">Lazy Load</a></li>
             <li><a href="../week03/responsive-images.html">responsive-images</a></li>
@@ -76,12 +77,15 @@
     <footer>
         <p>&copy; <span id="currentYear"></span> <span id="footerFullName">Abigail Maimela</span> [South Africa]</p>
         <p id="lastModified"></p>
+        <script>
+            document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
+        </script>
     </footer>
 
     <script src="../scripts/getdates.js"></script>
     <script>
-        document.getElementById('fullName').innerText = 'Abigail Maimela';
-        document.getElementById('footerFullName').innerText = 'Abigail Maimela';
+        document.getElementById('fullName').innerText = 'The Pretoria Chamber of Commerce'; 
+        document.getElementById('footerFullName').innerText = 'The Pretoria Chamber of Commerce'; 
 
         const darkModeToggle = document.getElementById('darkModeToggle');
         const mainElement = document.querySelector('main');
