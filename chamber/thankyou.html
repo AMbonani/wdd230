@@ -6,29 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You for Your Submission</title>
     <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="larger.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="chamber/base.css">
 </head>
 
 <body>
 
     <header>
         <img src="images/pretoria.PNG" alt="WebP Landscape">
-        <h1 id="fullName">Abigail R Maimela</h1>
-        <button id="darkModeToggle">Toggle Dark Mode</button>
+        <h1 id="fullName">The Pretoria Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="join.html">Join us</a></li>
+                <li><a href="directory.html">Directory</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../chamber">Chamber</a></li>
-            <li><a href="../siteplan">Site Plan</a></li>
-            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng">Book of Mormon App</a></li>
-            <li><a href="../week03/lazyload.html">Lazy Load</a></li>
-            <li><a href="../week03/responsive-images.html">responsive-images</a></li>
-            <li><a href="../week04/tablebuild.html">table Build</a></li>
-            <li><a href="../week04/index.html">form Start</a></li>
-            <li><a href="../form.html">form</a></li>
-        </ul>
-    </nav>
 
     <main>
         <h2>Thank You for Your Submission!</h2>
@@ -38,6 +35,9 @@
     <footer>
         <p>&copy; <span id="currentYear"></span> <span id="footerFullName">Abigail Maimela</span> [South Africa]</p>
         <p id="lastModified"></p>
+        <script>
+            document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
+        </script>
     </footer>
 
     <script src="form.js"></script>
