@@ -18,9 +18,9 @@
 
     <nav>
         <ul>
-            <li><a href="home">Home</a></li>
-            <li><a href="chamber">Chamber</a></li>
-            <li><a href="siteplan">Site Plan</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="chamber.html">Chamber</a></li>
+            <li><a href="siteplan.html">Site Plan</a></li>
             <li><a href="form.html">Form</a></li>
             <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng">Book of Mormon App</a></li>
             <li><a href="week03/lazyload.html">Lazy Load</a></li>
@@ -35,10 +35,10 @@
             <input type="text" id="username" name="username" required>
 
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" pattern="[a-zA-Z0-9]+" title="Must be alpha-numeric and at least 8 characters long" required>
+            <input type="password" id="password" name="password" pattern="[a-zA-Z0-9]{8,}" title="Must be alpha-numeric and at least 8 characters long" required>
 
             <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" pattern="[a-zA-Z0-9]+" title="Must be alpha-numeric and at least 8 characters long" required oninput="checkPasswordMatch()">
+            <input type="password" id="confirmPassword" name="confirmPassword" pattern="[a-zA-Z0-9]{8,}" title="Must be alpha-numeric and at least 8 characters long" required oninput="checkPasswordMatch()">
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid email address">
