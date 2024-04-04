@@ -3,49 +3,44 @@ document.addEventListener("DOMContentLoaded", function () {
     const currentYear = new Date().getFullYear();
     document.getElementById("currentYear").textContent = currentYear;
 
-    
+   
     const lastModified = new Date(document.lastModified);
     document.getElementById("lastModified").textContent = "Last Modified: " + lastModified.toLocaleString();
 
-    
-    const timestampInput = document.getElementById("timestamp");
-    timestampInput.value = new Date().toLocaleString();
+   s
+    const passwordInput = document.getElementById("password");
+    const confirmPasswordInput = document.getElementById("confirmPassword");
+    const emailInput = document.getElementById("email");
+    const form = document.querySelector("form");
 
-    
-    const membershipLevelSelect = document.getElementById("membershipLevel");
-    const membershipBenefitsDiv = document.getElementById("membershipBenefits");
-
-    membershipLevelSelect.addEventListener("change", function () {
-        const selectedLevel = membershipLevelSelect.value;
-        displayMembershipBenefits(selectedLevel);
-    });
-
-    function displayMembershipBenefits(level) {
-       
-        membershipBenefitsDiv.innerHTML = "";
-
-        
-        const benefits = {
-            NP: "No Fee for non-profit organizations.",
-            Bronze: "Bronze Membership Benefits...",
-            Silver: "Silver Membership Benefits...",
-            Gold: "Gold Membership Benefits...",
-        };
-
-        
-        const benefitsText = benefits[level] || "Select a membership level to view benefits.";
-        const benefitsParagraph = document.createElement("p");
-        benefitsParagraph.textContent = benefitsText;
-        membershipBenefitsDiv.appendChild(benefitsParagraph);
+   
+    function checkPasswordMatch() {
+        if (passwordInput.value !== confirmPasswordInput.value) {
+            confirmPasswordInput.setCustomValidity("Passwords do not match");
+        } else {
+            confirmPasswordInput.setCustomValidity("");
+        }
     }
 
-    
-    const darkModeToggle = document.getElementById("darkModeToggle");
-    const mainElement = document.querySelector("main");
+  
+    confirmPasswordInput.addEventListener("input", checkPasswordMatch);
 
-    darkModeToggle.addEventListener("click", function () {
-        mainElement.classList.toggle("dark-mode");
+    
+    const formFields = [passwordInput, confirmPasswordInput, emailInput];
+    formFields.forEach(field => {
+        field.setAttribute("required", "true");
     });
 
+ 
+    const header = document.querySelector("header");
+    const nav = document.querySelector("nav");
+    const footer = document.querySelector("footer");
 
+    const courseHeader = document.querySelector("header");
+    const courseNav = document.querySelector("nav");
+    const courseFooter = document.querySelector("footer");
+
+    header.innerHTML = courseHeader.innerHTML;
+    nav.innerHTML = courseNav.innerHTML;
+    footer.innerHTML = courseFooter.innerHTML;
 });
