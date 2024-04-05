@@ -5,7 +5,7 @@ async function getLinks() {
   try {
     const response = await fetch(linksURL);
     const data = await response.json();
-    displayLinks(data);
+    displayLinks(data.weeks);
   } catch (error) {
     console.error("Error fetching links:", error);
   }
@@ -20,13 +20,16 @@ function displayLinks(weeks) {
 
   weeks.forEach(week => {
     const listItem = document.createElement('li');
+    const linkList = document.createElement('ul'); 
 
     week.links.forEach((activity, index) => {
+      const linkItem = document.createElement('li'); 
       const link = document.createElement('a');
       link.href = baseURL + activity.url;
       link.textContent = activity.title;
 
-      listItem.appendChild(link);
+      linkItem.appendChild(link);
+      linkList.appendChild(linkItem);
 
       if (index < week.links.length - 1) {
         const separator = document.createElement('span');
@@ -35,13 +38,9 @@ function displayLinks(weeks) {
       }
     });
 
-    // Remove the last separator
-    if (listItem.lastChild.nodeType === Node.ELEMENT_NODE) {
-      listItem.lastChild.remove();
-    }
-
     // Set the text content to include week information
-    listItem.textContent = `${week.week}: ` + listItem.textContent;
+    listItem.textContent = `${week.week}: `;
+    listItem.appendChild(linkList); 
 
     // Append the modified list item to the container
     linksContainer.appendChild(listItem);
