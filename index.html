@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abigail Maimela - WDD 230 - Web Frontend Development</title>
-    <meta name="description" content="oThe Pretoria Chamber of Commerce.">
+    <meta name="description" content="The Pretoria Chamber of Commerce.">
     <meta name="author" content="Abigail Maimela">
     <link rel="icon" href="favicon.ico">
 
@@ -38,12 +38,14 @@
 </nav>
 
 <main>
-    <picture class="hero-image">
-        <source srcset="images/atlanta2.webp" media="(max-width: 400px)">
-        <source srcset="images/atlantatemple.webp" media="(max-width: 960px)">
-        <img src="images/atlantatemple.webp" alt="Favorite Temple Image">
+    <section class="hero-image">
         <div class="overlay">Atlanta Temple</div>
-    </picture>
+        <picture>
+            <source srcset="images/atlanta2.webp" media="(max-width: 400px)">
+            <source srcset="images/atlantatemple.webp" media="(max-width: 960px)">
+            <img src="images/atlantatemple.webp" alt="Favorite Temple Image">
+        </picture>
+    </section>
 
     <section class="card">
         <h3>Learning Activities</h3>
@@ -52,13 +54,14 @@
         </ul>
     </section>
 
-    <!-- Other sections and content -->
+    
 </main>
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.406274012599!2d28.2292712!3d-25.7478676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95619cbec65033%3A0xf66262b07a847b4c!2sPretoria!5e0!3m2!1sen!2sza!4v1651869176069!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
 <footer>
-    <!-- Footer content -->
+    <p>&copy; <span id="currentYear"></span> <span id="footerFullName">Abigail Maimela</span> [South Africa]</p>
+    <p id="lastModified"></p>
 </footer>
 
 <script src="scripts/getdates.js"></script>
