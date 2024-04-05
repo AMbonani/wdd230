@@ -1,70 +1,71 @@
 {
     "weeks": [
-      {
-        "week": "Week 1",
-        "links": [
-          {
-            "url": "week01/holygrail.html",
-            "title": "HG Layout"
-          },
-          {
-            "url": "week01/media-query.html",
-            "title": "mQueries"
-          }
-        ]
-      },
-      {
-        "week": "Week 02",
-        "links": [
-          {
-            "url": "week02/design.html",
-            "title": "Design"
-          },
-          {
-            "url": "week02/bom.html",
-            "title": "BOM"
-          }
-        ]
-      },
-      {
-        "week": "Week 03",
-        "links": [
-          {
-            "url": "week03/lazyload.html",
-            "title": "Lazy Load"
-          },
-          {
-            "url": "week03/responsive-images.html",
-            "title": "Responsive Images"
-          }
-        ]
-      },
-      {
-        "week": "Week 4",
-        "links": [
-          {
-            "url": "week04/tablebuild",
-            "title": "Table Build"
-          },
-          {
-            "url": "week04/form-start.html",
-            "title": "Form Start"
-          }
-        ]
-      },
-      {
-        "week": "Week 5",
-        "links": [
-          {
-            "url": "week05/prophets.html",
-            "title": "Prophets"
-          },
-          {
-            "url": "week05/weather.html",
-            "title": "Weather"
-          }
-        ]
-      }
+        {
+            "week": "Week 1",
+            "links": [
+                {
+                    "url": "week01/holygrail.html",
+                    "title": "Holy Grail Layout"
+                },
+                {
+                    "url": "week01/media-query.html",
+                    "title": "Media Queries"
+                }
+            ]
+        },
+        {
+            "week": "Week 2",
+            "links": [
+                {
+                    "url": "week02/design.html",
+                    "title": "Design"
+                },
+                {
+                    "url": "week02/bom.html",
+                    "title": "Browser Object Model"
+                }
+            ]
+        },
+        {
+            "week": "Week 3",
+            "links": [
+                {
+                    "url": "week03/lazyload.html",
+                    "title": "Lazy Loading"
+                },
+                {
+                    "url": "week03/responsive-images.html",
+                    "title": "Responsive Images"
+                }
+            ]
+        },
+        {
+            "week": "Week 4",
+            "links": [
+                {
+                    "url": "week04/tablebuild.html",
+                    "title": "Table Building"
+                },
+                {
+                    "url": "week04/form-start.html",
+                    "title": "Form Start"
+                }
+            ]
+        },
+        {
+            "week": "Week 5",
+            "links": [
+                {
+                    "url": "week05/prophets.html",
+                    "title": "Prophets"
+                },
+                {
+                    "url": "week05/weather.html",
+                    "title": "Weather"
+                }
+            ]
+        }
     ]
-  }
+}
+
   
