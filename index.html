@@ -1,10 +1,13 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abigail Maimela - WDD 230 - Web Frontend Development</title>
-    <meta name="description" content="The Pretoria Chamber of Commerce.">
+    <meta name="description" content="oThe Pretoria Chamber of Commerce.">
     <meta name="author" content="Abigail Maimela">
     <link rel="icon" href="favicon.ico">
 
@@ -20,98 +23,108 @@
     <link rel="stylesheet" href="https://codepen.io/blazzard-jason/pen/BaOwMvg">
     <link rel="stylesheet" href="https://codepen.io/AMbonani/pen/wvNOBjE">
 </head>
+
 <body>
 
-<header>
-    <img src="images/pretoria.PNG" alt="WebP Landscape">
-    <h1 id="fullName">Abigail Maimela</h1>
-    <button id="darkModeToggle">Toggle Dark Mode</button>
-</header>
+    <header>
+        <img src="images/pretoria.PNG" alt="WebP Landscape">
+        <h1 id="fullName">Abigail Maimela</h1>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+    </header>
 
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="chamber">Chamber</a></li>
-        <li><a href="week01/chamber-site-plan.html">Site plan</a></li>
-        <li><a href="form.html">form</a></li>
-    </ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="home">Home</a></li>
+            <li><a href="chamber">Chamber</a></li>
+            <li><a href="week01/chamber-site-plan.html">Site plan</a></li>
+            <li><a href="form.html">form</a></li>
+        </ul>
+    </nav>
 
-<main>
-    <section class="hero-image">
-        <div class="overlay">Atlanta Temple</div>
-        <picture>
+    <main>
+        <picture class="hero-image">
             <source srcset="images/atlanta2.webp" media="(max-width: 400px)">
             <source srcset="images/atlantatemple.webp" media="(max-width: 960px)">
             <img src="images/atlantatemple.webp" alt="Favorite Temple Image">
+            <div class="overlay">Atlanta Temple</div>
         </picture>
-    </section>
 
-    <section class="card">
-        <h3>Learning Activities</h3>
-        <ul id="learning-activities">
-            <!-- Dynamic content will be inserted here -->
-        </ul>
-    </section>
+        <section class="card">
+            <h3>Learning Activities</h3>
+            <ul>
+                <li><a href="https://codepen.io/marcobiedermann/pen/nbpKWV">codepen</a></li>
+                <li><a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_combinators4">w3schools</a></li>
+                <li><a href="week01/holygrail.html">Week 01 - Holy Grail Layout</a></li>
+                <li><a href="week01/media-query.html">Week 01 - Media Queries</a></li>
+                <li><a href="week02/design.html">Week 02 Design</a></li>
+                <li><a href="week02/bom.html">Week 02 BOM</a></li>
+                <li><a href="week03/lazyload.html">Week 03 Lazy load</a></li>
+                <li><a href="week04/tablebuild.html">Week 04 Table Build</a></li>
+                <li><a href="week04/thanks.html">Week 04 Thanks</a></li>
+                <li><a href="week04/index.html">Week 04 form Start</a></li>
+                <li><a href="week05/prophets.html">Week 05 Prophets</a></li>
+                <li><a href="week05/weather.html">Week 05 Weather</a></li>
+            </ul>
+        </section>
 
-    
-</main>
+        <section class="card">
+            <h3>Information</h3>
+            <p id="temperature">Temperature: Loading...</p>
+            <p id="condition">Condition: Loading...</p>
+            <img id="weatherIcon" alt="Weather Icon">
+            <p>Visits: <span id="visitCounter">0</span></p>
+        </section>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.406274012599!2d28.2292712!3d-25.7478676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95619cbec65033%3A0xf66262b07a847b4c!2sPretoria!5e0!3m2!1sen!2sza!4v1651869176069!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <section class="webp-image">
+            <h3>WebP Image</h3>
+            <img src="week03/images/landscape2.webp" alt="WebP Landscape">
+            <p><a href="week03/images/landscape.webp">WebP</a></p>
+        </section>
 
-<footer>
-    <p>&copy; <span id="currentYear"></span> <span id="footerFullName">Abigail Maimela</span> [South Africa]</p>
-    <p id="lastModified"></p>
-</footer>
+        <section class="card">
+            <h3>Ward Members</h3>
+            <pre id="wardMembers"></pre>
+        </section>
+    </main>
 
-<script src="scripts/getdates.js"></script>
-<script src="scripts/weather.js"></script>
-<script src="scripts/links.js"></script>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.406274012599!2d28.2292712!3d-25.7478676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95619cbec65033%3A0xf66262b07a847b4c!2sPretoria!5e0!3m2!1sen!2sza!4v1651869176069!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
-<script>
-    document.getElementById('fullName').innerText = 'Abigail Maimela';
-    document.getElementById('footerFullName').innerText = 'Abigail Maimela';
+    <footer>
+        <p>&copy; <span id="currentYear"></span> <span id="footerFullName">Abigail Maimela</span> [South Africa]</p>
+        <p id="lastModified"></p>
+    </footer>
 
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    const mainElement = document.querySelector('main');
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/links.js"></script>
 
-    darkModeToggle.addEventListener('click', () => {
-        mainElement.classList.toggle('dark-mode');
-    });
+    <script>
+        document.getElementById('fullName').innerText = 'Abigail Maimela';
+        document.getElementById('footerFullName').innerText = 'Abigail Maimela';
 
-    const visitCounter = document.getElementById('visitCounter');
-    let visits = localStorage.getItem('visits') || 0;
-    visits = parseInt(visits);
-    visits++;
-    localStorage.setItem('visits', visits.toString());
-    visitCounter.textContent = visits;
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const mainElement = document.querySelector('main');
 
-    fetch('https://raw.githubusercontent.com/AMbonani/wdd230/main/week05/new-ward-members.json')
-        .then(response => response.json())
-        .then(data => {
-            const wardMembersElement = document.getElementById('wardMembers');
-            wardMembersElement.innerText = JSON.stringify(data, null, 2);
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
+        darkModeToggle.addEventListener('click', () => {
+            mainElement.classList.toggle('dark-mode');
+        });
 
-    document.addEventListener("DOMContentLoaded", function () {
-        const passwordInput = document.getElementById("password");
-        const confirmPasswordInput = document.getElementById("confirmPassword");
+        const visitCounter = document.getElementById('visitCounter');
+        let visits = localStorage.getItem('visits') || 0;
+        visits = parseInt(visits);
+        visits++;
+        localStorage.setItem('visits', visits.toString());
+        visitCounter.textContent = visits;
 
-        function checkPasswordMatch() {
-            const password = passwordInput.value;
-            const confirmPassword = confirmPasswordInput.value;
-
-            if (password !== confirmPassword) {
-                confirmPasswordInput.setCustomValidity("Passwords do not match");
-            } else {
-                confirmPasswordInput.setCustomValidity("");
-            }
-        }
-
-        confirmPasswordInput.addEventListener("input", checkPasswordMatch);
-    });
-</script>
+        fetch('https://raw.githubusercontent.com/AMbonani/wdd230/main/week05/new-ward-members.json')
+            .then(response => response.json())
+            .then(data => {
+                const wardMembersElement = document.getElementById('wardMembers');
+                wardMembersElement.innerText = JSON.stringify(data, null, 2);
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
+    </script>
 
 </body>
+
 </html>
