@@ -20,6 +20,8 @@
 
     <link rel="stylesheet" href="https://codepen.io/blazzard-jason/pen/BaOwMvg">
     <link rel="stylesheet" href="https://codepen.io/AMbonani/pen/wvNOBjE">
+    <link rel="stylesheet" href="styles/custom.css"> <!-- New custom stylesheet -->
+
 </head>
 
 <body>
@@ -60,98 +62,7 @@
 
     <script src="scripts/getdates.js"></script>
     <script src="scripts/weather.js"></script>
-
-    <script>
-        document.getElementById('fullName').innerText = 'Abigail Maimela';
-        document.getElementById('footerFullName').innerText = 'Abigail Maimela';
-    
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const mainElement = document.querySelector('main');
-    
-        darkModeToggle.addEventListener('click', () => {
-            mainElement.classList.toggle('dark-mode');
-        });
-    
-        const visitCounter = document.getElementById('visitCounter');
-        let visits = localStorage.getItem('visits') || 0;
-        visits = parseInt(visits);
-        visits++;
-        localStorage.setItem('visits', visits.toString());
-        visitCounter.textContent = visits;
-    
-        let isGridView = true; 
-    
-        async function fetchMemberData() {
-            try {
-                const response = await fetch('data/members.json');
-                const membersData = await response.json();
-                const membersContainer = document.getElementById('membersContainer');
-                const membersContainerList = document.getElementById('membersContainerList');
-    
-                membersContainer.innerHTML = '';
-                membersContainerList.innerHTML = '';
-    
-                membersData.members.forEach(member => {
-                    const memberCard = document.createElement('div');
-                    memberCard.classList.add('member-card');
-    
-                    if (isGridView) {
-                        memberCard.innerHTML = `
-                            <img src="chamber/images/${member.image}" alt="${member.name}">
-                            <!-- ... rest of your grid view content ... -->
-                        `;
-                        membersContainer.appendChild(memberCard);
-                    } else {
-                        memberCard.innerHTML = `
-                            <img src="chamber/images/${member.image}" alt="${member.name}">
-                            <!-- ... rest of your list view content ... -->
-                        `;
-                        membersContainerList.appendChild(memberCard);
-                    }
-                });
-            } catch (error) {
-                console.error('Error fetching member data:', error);
-            }
-        }
-    
-    
-        document.getElementById('membersContainerList').classList.add('list-view');
-        fetchMemberData();
-    
-        document.getElementById('toggleViewButton').addEventListener('click', () => {
-            const membersContainer = document.getElementById('membersContainer');
-            const membersContainerList = document.getElementById('membersContainerList');
-    
-            membersContainer.classList.toggle('grid-view');
-            membersContainer.classList.toggle('list-view');
-            membersContainerList.classList.toggle('grid-view');
-            membersContainerList.classList.toggle('list-view');
-    
-            isGridView = !isGridView;
-            fetchMemberData();
-        });
-    
-        async function fetchWeatherData() {
-            try {
-                const response = await fetch('https://api.weatherapi.com/v1/current.json?key=77bf00e20f235f8f556baa0e89701021=pretoria');
-                const weatherData = await response.json();
-    
-            
-                document.getElementById('temperature').textContent = `Temperature: ${weatherData.current.temp_c}°C`;
-                document.getElementById('condition').textContent = `Condition: ${weatherData.current.condition.text}`;
-                document.getElementById('weatherIcon').src = `https:${weatherData.current.condition.icon}`;
-            } catch (error) {
-                console.error('Error fetching weather data:', error);
-            }
-        }
-    
-        
-        updateView();
-    
-        function updateView() {
-            fetchWeatherData(); 
-        }
-    </script>
+    <script src="scripts/members.js"></script> <!-- New JavaScript file for fetching member data -->
 </body>
 
 </html>
