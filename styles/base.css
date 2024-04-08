@@ -58,15 +58,17 @@ main {
 
 .card {
     background-color: #fff;
-    padding: 30px;
+    padding: 20px; /* Adjusted padding */
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the content */
 }
 
 .card h2 {
     margin-top: 0;
     font-family: 'Poppins', sans-serif;
     color: #2c3e50;
+    font-size: 1.5rem; /* Increased font size */
 }
 
 ul {
@@ -78,6 +80,7 @@ li a {
     text-decoration: none;
     color: #e67e22;
     transition: color 0.3s ease;
+    font-size: 1.2rem; /* Increased font size */
 }
 
 li a:hover {
@@ -126,5 +129,3 @@ footer img {
     max-width: 80%; 
     text-align: center; 
 }
-
-
