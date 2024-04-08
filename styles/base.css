@@ -129,3 +129,38 @@ footer img {
     max-width: 80%; 
     text-align: center; 
 }
+/* Add your custom CSS styles here */
+
+/* New styles for member cards */
+.member-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.member-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.member-card h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.member-card p {
+    margin-bottom: 10px;
+}
+
+/* New styles for list view */
+.list-view .member-card {
+    padding: 10px;
+}
+
+/* New styles for toggle view button */
+#toggleViewButton {
+    margin-bottom: 20px;
+}
