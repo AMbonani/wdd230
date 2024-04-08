@@ -1,67 +1,67 @@
 {
     "members": [
-      {
-        "name": "Company A",
-        "address": "123 Main St, Cityville",
-        "phone": "555-1234",
-        "website": "https://www.companyA.com",
-        "image": "images/Company-A.PNG",
-        "membership_level": "Gold",
-        "other_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      },
-      {
-        "name": "Company B",
-        "address": "456 Oak St, Townsville",
-        "phone": "555-5678",
-        "website": "https://www.companyB.com",
-        "image": "images/Company-B.PNG",
-        "membership_level": "Silver",
-        "other_info": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      },
-      {
-        "name": "Company C",
-        "address": "789 Pine St, Villagetown",
-        "phone": "555-9012",
-        "website": "https://www.companyC.com",
-        "image": "images/Company-C.PNG",
-        "membership_level": "Bronze",
-        "other_info": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-      },
-      {
-        "name": "Company D",
-        "address": "101 Elm St, Hamletville",
-        "phone": "555-3456",
-        "website": "https://www.companyD.com",
-        "image": "images/Company-D.PNG",
-        "membership_level": "Platinum",
-        "other_info": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-      },
-      {
-        "name": "Company E",
-        "address": "202 Maple St, Riverside",
-        "phone": "555-7890",
-        "website": "https://www.companyE.com",
-        "image": "images/Company-E.PNG",
-        "membership_level": "Gold",
-        "other_info": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      },
-      {
-        "name": "Company F",
-        "address": "303 Cedar St, Lakeside",
-        "phone": "555-2345",
-        "website": "https://www.companyF.com",
-        "image": "images/Company-F.PNG",
-        "membership_level": "Silver",
-        "other_info": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-      },
-      {
-        "name": "Company G",
-        "address": "404 Birch St, Mountainview",
-        "phone": "555-6789",
-        "website": "https://www.companyG.com",
-        "image": "images/Company-G.PNG",
-        "membership_level": "Bronze",
-        "other_info": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-      }
+        {
+            "name": "Company A",
+            "address": "123 Main St, Cityville",
+            "phone": "555-1234",
+            "website": "https://www.companyA.com",
+            "image": "Company-A.PNG",
+            "membership_level": "Gold",
+            "other_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+            "name": "Company B",
+            "address": "456 Oak St, Townsville",
+            "phone": "555-5678",
+            "website": "https://www.companyB.com",
+            "image": "Company-B.PNG",
+            "membership_level": "Silver",
+            "other_info": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "name": "Company C",
+            "address": "789 Pine St, Villagetown",
+            "phone": "555-9012",
+            "website": "https://www.companyC.com",
+            "image": "Company-C.PNG",
+            "membership_level": "Bronze",
+            "other_info": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "name": "Company D",
+            "address": "101 Elm St, Hamletville",
+            "phone": "555-3456",
+            "website": "https://www.companyD.com",
+            "image": "Company-D.PNG",
+            "membership_level": "Platinum",
+            "other_info": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+            "name": "Company E",
+            "address": "202 Maple St, Riverside",
+            "phone": "555-7890",
+            "website": "https://www.companyE.com",
+            "image": "Company-E.PNG",
+            "membership_level": "Gold",
+            "other_info": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "name": "Company F",
+            "address": "303 Cedar St, Lakeside",
+            "phone": "555-2345",
+            "website": "https://www.companyF.com",
+            "image": "Company-F.PNG",
+            "membership_level": "Silver",
+            "other_info": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+        },
+        {
+            "name": "Company G",
+            "address": "404 Birch St, Mountainview",
+            "phone": "555-6789",
+            "website": "https://www.companyG.com",
+            "image": "Company-G.PNG",
+            "membership_level": "Bronze",
+            "other_info": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        }
     ]
 }
