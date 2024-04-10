@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const lastModified = new Date(document.lastModified);
     document.getElementById("lastModified").textContent = "Last Modified: " + lastModified.toLocaleString();
 
-   s
     const passwordInput = document.getElementById("password");
     const confirmPasswordInput = document.getElementById("confirmPassword");
     const emailInput = document.getElementById("email");
