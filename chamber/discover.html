@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Pretoria Chamber of commerce</title>
+    <title>The Pretoria Chamber of Commerce</title>
     <meta name="description" content="The Pretoria Chamber Of Commerce, there for your business needs.">
     <meta name="author" content="Abigail Maimela">
     <link rel="icon" href="favicon.ico">
@@ -18,7 +18,69 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
 
+    <!-- External CSS for image hover effects -->
     <link rel="stylesheet" href="https://codepen.io/blazzard-jason/pen/BaOwMvg">
+    
+    <!-- Internal CSS for specific styles -->
+    <style>
+        /* Add any additional styles here */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .sidebar {
+            /* Sidebar styles */
+        }
+
+        .photo-gallery {
+            /* Photo gallery styles */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .photo-gallery figure {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photo-gallery figure img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-gallery figure:hover img {
+            transform: scale(1.1);
+        }
+
+        .photo-gallery figure figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .photo-gallery figure:hover figcaption {
+            opacity: 1;
+        }
+
+        /* Adjustments for smaller screens */
+        @media screen and (max-width: 768px) {
+            /* Add any responsive styles here */
+        }
+    </style>
 </head>
 
 <body>
@@ -32,64 +94,55 @@
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-        
             <li><a href="siteplan">Site Plan</a></li>
             <li><a href="form">Form</a></li>
             <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng">Book of Mormon App</a></li>
             <li><a href="week03/lazyload.html">Lazy Load</a></li>
             <li><a href="week03/responsive-images.html">responsive-images</a></li>
-
             <li><a href="bom3.html">Book of Mormon 3</a></li>
         </ul>
     </nav>
 
     <main>
         <div class="container">
+            <!-- Sidebar content -->
             <div class="sidebar" id="sidebarContent">
-             
+                <!-- Dynamic content based on localStorage -->
+                <p id="visitMessage">Welcome! Let us know if you have any questions.</p>
+                <!-- Placeholder content for upcoming events and attractions -->
+                <p id="events">Upcoming Event: <a href="https://conferencenext.com/conferences/south-africa/business" target="_blank">Business Conference</a></p>
+                <p id="attractions">Attractions: <a href="https://www.menlynpark.co.za/" target="_blank">Menlyn Park Mall</a></p>
             </div>
 
+            <!-- Photo gallery -->
             <div class="photo-gallery">
-                
                 <figure>
-                    <img src="images/freedom-park.webp" alt="freedom-park" loading="lazy">
+                    <img src="images/freedom-park.webp" alt="Freedom Park" loading="lazy">
                     <figcaption>Freedom Park</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/Pretoria-Zoo.webp" alt="Pretoria-Zoo" loading="lazy">
+                    <img src="images/Pretoria-Zoo.webp" alt="Pretoria Zoo" loading="lazy">
                     <figcaption>Pretoria Zoo</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/transvaal-museum.webp" alt="transvaal-museum" loading="lazy">
+                    <img src="images/transvaal-museum.webp" alt="Transvaal Museum" loading="lazy">
                     <figcaption>Transvaal Museum</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/unionhoreseman.webp" alt="unionhoreseman" loading="lazy">
+                    <img src="images/unionhoreseman.webp" alt="Union Horseman" loading="lazy">
                     <figcaption>Union Horseman</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/unionbuildings.webp" alt="unionbuildings" loading="lazy">
+                    <img src="images/unionbuildings.webp" alt="Union Buildings" loading="lazy">
                     <figcaption>Union Buildings</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/voortrekker-monument.webp" alt="voortrekker-monument" loading="lazy">
+                    <img src="images/voortrekker-monument.webp" alt="Voortrekker Monument" loading="lazy">
                     <figcaption>Voortrekker Monument</figcaption>
                 </figure>
             </div>
-
-            <div class="container">
-                <div class="sidebar" id="sidebarContent">
-                    
-                  
-                
-                    <p id="events">Upcoming Event: <a href="https://conferencenext.com/conferences/south-africa/business" target="_blank">Business Conference</a></p>
-                    <p id="attractions">Attractions: <a href="https://www.menlynpark.co.za/" target="_blank">Menlyn Park Mall</a></p>
-                </div>
         </div>
     </main>
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.406274012599!2d28.2292712!3d-25.7478676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95619cbec65033%3A0xf66262b07a847b4c!2sPretoria!5e0!3m2!1sen!2sza!4v1651869176069!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
 
     <footer>
         <p>&copy; <span id="currentYear"></span> <span id="footerFullName">Abigail Maimela</span> [South Africa]</p>
@@ -98,10 +151,6 @@
 
     <script src="scripts/getdates.js"></script>
     <script src="scripts/discover.js"></script>
-
-   
-    <link rel="stylesheet" href="styles/discover.css">
-
 </body>
 
 </html>
