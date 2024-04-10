@@ -24,6 +24,8 @@
 
     <header>
         <h1>The Pretoria Chamber of Commerce</h1>
+        <!-- Hamburger Menu Icon -->
+        <button id="menuToggle">&#9776;</button>
         <nav>
             <ul>
                 <li><a href="/index.html">Home</a></li>
@@ -46,17 +48,22 @@
             <a href="#" class="button">Join Now</a>
         </section>
 
+        <!-- Current Events Section -->
         <section class="events">
             <h2>Current Events</h2>
             <p>Event 1: Lorem ipsum</p>
             <p>Event 2: Lorem ipsum</p>
         </section>
 
+        <!-- Weather Section -->
         <section class="weather">
             <h2>Weather</h2>
-            <p>Current weather: Sunny</p>
+            <p id="temperature">Temperature: Loading...</p>
+            <p id="condition">Condition: Loading...</p>
+            <img id="weatherIcon" alt="Weather Icon">
         </section>
 
+        <!-- Company Spotlights Section -->
         <section class="spotlights">
             <h2>Company Spotlights</h2>
             <div class="spotlight">
@@ -76,11 +83,14 @@
         </script>
     </footer>
 
-    <footer>
-        <p>&copy; <span id="currentYear"></span> <span id="footerFullName">Abigail Maimela</span> [South Africa]</p>
-        <p id="lastModified"></p>
-    </footer>
+    <!-- Hamburger Menu Functionality -->
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+    </script>
 
+    <!-- Fetch Weather Data -->
     <script src="scripts/weather.js"></script>
     <script>
         async function fetchWeatherData() {
@@ -96,12 +106,10 @@
             }
         }
 
-        updateView();
-
-        function updateView() {
-            fetchWeatherData();
-        }
+        fetchWeatherData();
     </script>
 </body>
 
 </html>
+
+
