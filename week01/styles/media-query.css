@@ -5,9 +5,9 @@ body {
 header, main, footer {
     max-width: 640px;
     margin: 1rem auto;
-    border: 1px solid #138a6f;
+    border: 1px solid #bbb;
     padding: 1rem;
-    background-color: #1b7fa7cd; 
+    background-color: #e6f2ff;
 }
 
 main {
@@ -18,5 +18,5 @@ main {
 
 section {
     padding: 1rem;
-    background-color: #788488cd; 
+    background-color: #fff;
 }
