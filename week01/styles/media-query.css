@@ -19,5 +19,11 @@ main {
 section {
     padding: 1rem;
     background-color: #fff;
-    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.verse {
+    margin-bottom: 1rem; 
 }
