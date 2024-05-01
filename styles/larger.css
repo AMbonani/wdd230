@@ -28,19 +28,19 @@ header span {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
+    color: #fff; /* Ensure name is visible */
 }
 
 nav {
-    display: flex;
-    justify-content: center; /* Center the navigation horizontally */
+    background-color: #87827d;
     padding: 10px;
     text-align: center;
 }
 
 nav a {
-    color: burlywood;
+    color: #fff;
     text-decoration: none;
-    margin: 0 10px; /* Add margin to create space between tabs */
+    margin: 0 10px;
     padding: 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -130,6 +130,7 @@ footer img {
     max-width: 80%; 
     text-align: center; 
 }
+/* Add your custom CSS styles here */
 
 /* New styles for member cards */
 .member-card {
@@ -164,4 +165,3 @@ footer img {
 #toggleViewButton {
     margin-bottom: 20px;
 }
-
