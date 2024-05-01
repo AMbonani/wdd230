@@ -1,44 +1,62 @@
+
+
+nav {
+  display: flex;
+  flex-direction: column; 
+}
+
+nav a {
+  margin: 5px 0; 
+}
+
+main {
+  max-width: 90%; 
+  margin: 0 auto; /* Center the main element horizontally */
+}
+
+.card {
+  padding: 20px; /* Reduce padding for smaller screens */
+}
+
+ul {
+  list-style-type: none; /* Remove bullets from lists */
+}
+
+
+
 @media (min-width: 768px) {
+  nav {
+    flex-direction: row; 
+    justify-content: center; 
+  }
 
-    nav {
-      display: flex;
-      justify-content: center;
-    }
-  
-    nav a {
-      display: inline-block;
-      margin: 0 10px;
-    }
-  
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 30px;
-    }
-  
-    .card {
-      padding: 30px;
-    }
-  
-    ul {
-      list-style-type: none;
-    }
+  nav a {
+    margin: 0 10px; 
+  }
 
-    
-    .hero-image-container {
-      position: relative;
-    }
+  main {
+    max-width: 1200px; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px; 
+  }
 
-    .overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(255, 255, 255, 0.7); 
-      padding: 10px 20px; 
-      border-radius: 5px;
-      white-space: nowrap; 
-    }
+  .card {
+    padding: 30px; 
+  }
+
+  .hero-image-container {
+    position: relative;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 10px 20px; 
+    border-radius: 5px;
+    white-space: nowrap; 
+  }
 }
