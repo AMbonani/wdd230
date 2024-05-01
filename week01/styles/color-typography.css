@@ -25,10 +25,10 @@
 }
 
 .typography p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Body Font */
     line-height: 1.5;
 }
 
 .typography p:last-child {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Applying a different font for the last paragraph */
 }
