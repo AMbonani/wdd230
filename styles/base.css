@@ -1,3 +1,27 @@
+.card ul li ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+}
+
+.card ul li ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.card ul li ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #eee;
+    border: 1px solid #ccc;
+}
+
+.card ul li ul li a:hover {
+    background-color: #ccc;
+}
+
 /* Custom CSS styles */
 
 body {
@@ -139,6 +163,7 @@ footer img {
     max-width: 80%; 
     text-align: center; 
 }
+
 /* Add your custom CSS styles here */
 
 /* New styles for member cards */
