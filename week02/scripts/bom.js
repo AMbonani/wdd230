@@ -1,12 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOMContentLoaded event fired');
+    
     const input = document.getElementById('favchap');
-    const button = document.querySelector('button[type="button"]'); // Changed to select by type="button"
+    const button = document.querySelector('button[type="button"]');
     const list = document.getElementById('list');
 
     button.addEventListener('click', function() {
+        console.log('Button clicked');
+        
         const chapter = input.value.trim();
         
         if (chapter !== '') {
+            console.log('Chapter:', chapter);
             addChapter(chapter);
             input.value = ''; // Clear input
             input.focus(); // Set focus back to input
@@ -17,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function addChapter(chapter) {
+        console.log('Adding chapter:', chapter);
+        
         const listItem = document.createElement('li');
         listItem.textContent = chapter;
 
@@ -31,4 +38,3 @@ document.addEventListener('DOMContentLoaded', function() {
         list.appendChild(listItem);
     }
 });
-
