@@ -1,47 +1,36 @@
+// script.js
 
+document.addEventListener('DOMContentLoaded', function() {
+    const input = document.getElementById('favchap');
+    const button = document.querySelector('button[type="submit"]');
+    const list = document.getElementById('list');
 
-
-const inputElement = document.getElementById('favchap');
-const addButton = document.querySelector('button');
-const listElement = document.getElementById('list');
-
-
-addButton.addEventListener('click', () => {
-    
-    const chapterValue = inputElement.value;
-
-    
-    if (chapterValue.trim() !== '') {
+    button.addEventListener('click', function() {
+        const chapter = input.value.trim();
         
+        if (chapter !== '') {
+            addChapter(chapter);
+            input.value = ''; // Clear input
+            input.focus(); // Set focus back to input
+        } else {
+            alert('Please enter a chapter before adding.'); // Display message if input is empty
+            input.focus(); // Set focus back to input
+        }
+    });
+
+    function addChapter(chapter) {
         const listItem = document.createElement('li');
+        listItem.textContent = chapter;
 
-        
         const deleteButton = document.createElement('button');
         deleteButton.textContent = '❌';
-
-        
-        listItem.textContent = chapterValue;
-
-        
-        listItem.appendChild(deleteButton);
-
-        
-        deleteButton.addEventListener('click', () => {
-            
+        deleteButton.addEventListener('click', function() {
             listItem.remove();
-            
-            inputElement.focus();
         });
 
-        
-        listElement.appendChild(listItem);
-
-    
-        inputElement.value = '';
-    } else {
-        
-        alert('Please enter a chapter before adding.');
-        inputElement.focus();
+        listItem.appendChild(deleteButton);
+        list.appendChild(listItem);
     }
 });
+
 
