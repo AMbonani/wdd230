@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('favchap');
-    const button = document.querySelector('button[type="submit"]');
+    const button = document.querySelector('button[type="button"]');
     const list = document.getElementById('list');
 
     button.addEventListener('click', function() {
