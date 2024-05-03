@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('favchap');
-    const button = document.querySelector('button[type="button"]');
+    const button = document.querySelector('button[type="button"]'); // Changed to select by type="button"
     const list = document.getElementById('list');
 
     button.addEventListener('click', function() {
@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const deleteButton = document.createElement('button');
         deleteButton.textContent = '❌';
+        deleteButton.classList.add('delete'); // Add a class for styling
         deleteButton.addEventListener('click', function() {
             listItem.remove();
         });
