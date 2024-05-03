@@ -1,5 +1,3 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('favchap');
     const button = document.querySelector('button[type="submit"]');
