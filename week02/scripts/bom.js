@@ -1,17 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOMContentLoaded event fired');
-    
     const input = document.getElementById('favchap');
-    const button = document.querySelector('button[type="button"]');
+    const button = document.getElementById('addChapterButton'); // Changed to select by ID
     const list = document.getElementById('list');
 
-    button.addEventListener('click', function() {
-        console.log('Button clicked');
-        
+    button.addEventListener('click', function() { // Changed to listen for button click event
         const chapter = input.value.trim();
         
         if (chapter !== '') {
-            console.log('Chapter:', chapter);
             addChapter(chapter);
             input.value = ''; // Clear input
             input.focus(); // Set focus back to input
@@ -22,14 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function addChapter(chapter) {
-        console.log('Adding chapter:', chapter);
-        
         const listItem = document.createElement('li');
         listItem.textContent = chapter;
 
         const deleteButton = document.createElement('button');
         deleteButton.textContent = '❌';
-        deleteButton.classList.add('delete'); // Add a class for styling
         deleteButton.addEventListener('click', function() {
             listItem.remove();
         });
