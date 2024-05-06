@@ -22,11 +22,14 @@ nav {
     justify-content: space-between;
     padding: 10px;
     background-color: #333; /* dark gray */
+    flex-wrap: wrap; /* Ensure navigation items wrap when necessary */
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
