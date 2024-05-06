@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #2c3e50; /* dark blue */
+    background-color: #34495e; /* dark blue */
     color: #fff; /* white */
     padding: 20px;
     display: flex;
@@ -28,11 +28,11 @@ header span {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
-    color: #fff; /* Ensure name is visible */
+    color: #fff; /* white */
 }
 
 nav {
-    background-color: #87827d; /* gray */
+    background-color: #5d6d7e; /* dark gray */
     padding: 10px;
     text-align: center;
 }
@@ -47,7 +47,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #191615; /* dark gray */
+    background-color: #34495e; /* darker blue */
 }
 
 main {
@@ -68,7 +68,7 @@ main {
 .card h2 {
     margin-top: 0;
     font-family: 'Poppins', sans-serif;
-    color: #2c3e50; /* dark blue */
+    color: #34495e; /* dark blue */
     font-size: 1.5rem; /* Increased font size */
 }
 
@@ -89,7 +89,7 @@ li a:hover {
 }
 
 footer {
-    background-color: #2c3e50; /* dark blue */
+    background-color: #34495e; /* dark blue */
     color: #fff; /* white */
     padding: 20px;
     text-align: center;
@@ -148,7 +148,7 @@ footer img {
 }
 
 .member-card h2 {
-    color: #2c3e50; /* dark blue */
+    color: #34495e; /* dark blue */
     font-size: 1.5rem;
     margin-bottom: 5px;
 }
