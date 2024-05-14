@@ -1,66 +1,34 @@
-@media screen and (min-width: 768px) {
-    body {
-        font-size: 18px; 
-    }
+@media (min-width: 768px) {
 
-    header {
-        padding: 20px; 
+    nav {
+      display: flex;
+      justify-content: center;
     }
-
-    .container {
-        display: flex;
-        justify-content: center;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: row; 
-    }
-
+  
     nav a {
-        padding: 15px; 
+      display: inline-block;
+      margin: 0 10px;
     }
-
+  
+   
     main {
-        margin: 20px; 
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-
-    .hero {
-        padding: 30px; 
+  
+    main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
     }
-
-    .hero img {
-        max-width: 100%; 
-        height: auto; 
+  
+    .card {
+      padding: 30px;
     }
-
-    .hero h2 {
-        font-size: 36px; 
-        text-align: center; 
+  
+    ul {
+      list-style-type: none;
     }
-
-    .hero p {
-        text-align: center; 
-    }
-
-    .cta {
-        font-size: 20px; 
-    }
-
-    .events,
-    .weather,
-    .spotlights {
-        margin: 20px; 
-    }
-
-    .spotlight {
-        padding: 20px; 
-    }
-
-    footer {
-        padding: 20px; 
-    }
-}
+  
+   
+  }
