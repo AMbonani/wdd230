@@ -22,13 +22,14 @@
 
 <body>
 
-    <header>
+        <header>
         <img src="images/pretoria.PNG" alt="WebP Landscape">
         <h1 id="fullName">Abigail Maimela</h1>
-        <button id="darkModeToggle">Toggle Dark Mode</button>
+        <button id="darkModeToggle">&#9681; Dark Mode</button>
+        <button id="hamburgerButton">&#9776;</button>
     </header>
-
-    <nav>
+<nav id="primaryNav">
+    
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="chamber">Chamber</a></li>
@@ -92,7 +93,8 @@
     <script src="scripts/getdates.js"></script>
     <script src="scripts/weather.js"></script>
     <script src="scripts/links.js"></script>
-
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/darkmode.js"></script>
     <script>
         document.getElementById('fullName').innerText = 'Abigail Maimela';
         document.getElementById('footerFullName').innerText = 'Abigail Maimela';
