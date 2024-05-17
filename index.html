@@ -93,19 +93,26 @@
     <script src="scripts/getdates.js"></script>
     <script src="scripts/weather.js"></script>
     <script src="scripts/links.js"></script>
-    <script src="scripts/hamburger.js"></script>
-    <script src="scripts/darkmode.js"></script>
+    
     <script>
         document.getElementById('fullName').innerText = 'Abigail Maimela';
         document.getElementById('footerFullName').innerText = 'Abigail Maimela';
 
+        const primaryNav = document.getElementById('primaryNav');
+        const hamburgerButton = document.getElementById('hamburgerButton');
+
+        hamburgerButton.addEventListener('click', () => {
+            primaryNav.classList.toggle('open');
+            hamburgerButton.innerHTML = primaryNav.classList.contains('open') ? '&#10005;' : '&#9776;';
+        });
+
+        // Dark mode toggle code
         const darkModeToggle = document.getElementById('darkModeToggle');
         const mainElement = document.querySelector('main');
 
         darkModeToggle.addEventListener('click', () => {
             mainElement.classList.toggle('dark-mode');
         });
-
         const visitCounter = document.getElementById('visitCounter');
         let visits = localStorage.getItem('visits') || 0;
         visits = parseInt(visits);
