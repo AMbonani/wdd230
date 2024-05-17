@@ -152,3 +152,91 @@ footer img {
 .member-card img {
     width: 100%;
     border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.member-card h2 {
+    color: #0000AA; /* Blue */
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.member-card p {
+    margin-bottom: 10px;
+}
+
+/* New styles for list view */
+.list-view .member-card {
+    padding: 10px;
+}
+
+/* New styles for toggle view button */
+#toggleViewButton {
+    margin-bottom: 20px;
+}
+
+/* Additional styles for larger views */
+@media (min-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+  
+    nav a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+    }
+
+    .card {
+        padding: 30px;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+}
+
+/* Styles for section.card to fix color contrast */
+section.card {
+    background-color: #0000AA; /* Blue */
+    color: #FFFFFF; /* White */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+section.card h3 {
+    color: #FFFFFF; /* White */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+section.card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section.card li {
+    margin-bottom: 10px;
+}
+
+section.card li a {
+    color: #FFFF55; /* Yellow */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+section.card li a:hover {
+    color: #55FFFF; /* Light Cyan */
+}
