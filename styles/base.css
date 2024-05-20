@@ -1,5 +1,4 @@
 /* Base CSS styles */
-
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -231,3 +230,30 @@ iframe {
     border: 0;
 }
 
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #111111; /* Dark Background */
+    color: #FFFFFF; /* White Text */
+}
+
+.dark-mode header {
+    background-color: #333333; /* Dark Header Background */
+}
+
+.dark-mode nav {
+    background-color: #666666; /* Dark Nav Background */
+}
+
+.dark-mode nav a {
+    color: #FFFFFF; /* White Nav Text */
+}
+
+.dark-mode .card {
+    background-color: #333333; /* Dark Card Background */
+    color: #FFFFFF; /* White Text */
+}
+
+.dark-mode section.card {
+    background-color: #333333; /* Dark Card Background */
+    color: #FFFFFF; /* White Text */
+}
