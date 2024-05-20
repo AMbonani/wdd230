@@ -13,42 +13,39 @@
     main {
         max-width: 1200px;
         margin: 0 auto;
-    }
-
-    main {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr; /* Update grid layout for larger screens */
         gap: 30px;
     }
 
     .card {
-        padding: 30px;
+        padding: 30px; /* Keep padding consistent */
     }
 
     ul {
-        list-style-type: none;
+        list-style-type: none; /* Keep list style consistent */
     }
 }
 
 @media (min-width: 1024px) {
     .overlay {
-        font-size: 1.2rem; /* Adjust font size for larger screens */
-        padding: 15px 25px; /* Adjust padding for larger screens */
+        font-size: 1.2rem; /* Keep font size consistent */
+        padding: 15px 25px; /* Keep padding consistent */
     }
 
     .hero-image-container + h1 {
-        font-size: 2.5rem; /* Adjust font size for larger screens */
+        font-size: 2.5rem; /* Keep font size consistent */
     }
 
     .card h2 {
-        font-size: 2rem; /* Adjust font size for larger screens */
+        font-size: 2rem; /* Keep font size consistent */
     }
 
     .card {
-        padding: 40px; /* Adjust padding for larger screens */
+        padding: 40px; /* Keep padding consistent */
     }
 
     nav a {
-        font-size: 1.2rem; /* Adjust font size for larger screens */
+        font-size: 1.2rem; /* Keep font size consistent */
     }
 }
