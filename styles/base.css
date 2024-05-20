@@ -113,18 +113,16 @@ footer img {
     margin-left: 5px;
 }
 
-@media (max-width: 768px) {
-    main {
-        grid-template-columns: 1fr;
-    }
-    .card {
-        width: 100%; 
-    }
-}
-
 /* New styles for hero image container and overlay */
 .hero-image-container {
     position: relative;
+    margin-bottom: 30px;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .overlay {
@@ -132,79 +130,11 @@ footer img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.7); 
-    padding: 10px 20px; 
-    border-radius: 5px; 
-    white-space: nowrap; 
-    max-width: 80%; 
-    text-align: center; 
-}
-/* Add your custom CSS styles here */
-
-/* New styles for member cards */
-.member-card {
-    background-color: #FFFFFF; /* White */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.member-card img {
-    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
     border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.member-card h2 {
-    color: #0000AA; /* Blue */
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-}
-
-.member-card p {
-    margin-bottom: 10px;
-}
-
-/* New styles for list view */
-.list-view .member-card {
-    padding: 10px;
-}
-
-/* New styles for toggle view button */
-#toggleViewButton {
-    margin-bottom: 20px;
-}
-
-/* Additional styles for larger views */
-@media (min-width: 768px) {
-    nav {
-        display: flex;
-        justify-content: center;
-    }
-  
-    nav a {
-        display: inline-block;
-        margin: 0 10px;
-    }
-
-    main {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    main {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 30px;
-    }
-
-    .card {
-        padding: 30px;
-    }
-
-    ul {
-        list-style-type: none;
-    }
+    white-space: nowrap;
+    text-align: center;
 }
 
 /* Styles for section.card to fix color contrast */
@@ -247,17 +177,8 @@ section.card {
     z-index: 10;
 }
 
-.hero-image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.hero-image-container {
-    margin-bottom: 30px;
-}
-
 .hero-image-container + section.card {
     margin-top: -30px; /* Adjust as necessary to prevent overlap */
     padding-top: 30px; /* Adjust as necessary for spacing */
 }
+
