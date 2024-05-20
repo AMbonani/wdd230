@@ -22,8 +22,8 @@ header div {
 }
 
 header img {
-    width: 60px;
-    height: 60px;
+    width: 100px; /* Increased width of the hero image */
+    height: 100px; /* Increased height of the hero image */
     border-radius: 50%;
 }
 
@@ -128,6 +128,7 @@ footer img {
 .sidebar {
     background-color: #CCCCCC; /* Light Gray */
     padding: 20px;
+    margin-right: 20px; /* Add margin to move sidebar to the left */
 }
 
 .main-content {
@@ -135,6 +136,8 @@ footer img {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding-left: 20px; /* Add left padding to prevent images from covering information */
+    padding-right: 20px; /* Add right padding to prevent images from covering information */
 }
 
 /* Media query for larger screens */
@@ -142,53 +145,4 @@ footer img {
     .container {
         grid-template-columns: 250px 1fr; /* Sidebar and main content */
     }
-}
-
-/* Sidebar styles */
-.sidebar {
-    background-color: #f0f0f0; /* Light Gray */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1; /* Ensure sidebar is above images */
-}
-
-.sidebar h2 {
-    font-size: 1.5rem;
-    color: #333; /* Dark Gray */
-    margin-bottom: 20px;
-}
-
-.sidebar p {
-    font-size: 1.2rem;
-    color: #666; /* Medium Gray */
-    margin-bottom: 15px;
-}
-
-.sidebar h3 {
-    font-size: 1.3rem;
-    color: #333; /* Dark Gray */
-    margin-bottom: 10px;
-}
-
-.sidebar ul {
-    margin-left: 20px;
-}
-
-.sidebar ul li {
-    margin-bottom: 5px;
-}
-
-.sidebar ul li a {
-    color: #007bff; /* Blue */
-    text-decoration: none;
-}
-
-.sidebar ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Ensure main content is behind images */
-.main-content {
-    z-index: 0;
 }
