@@ -118,120 +118,28 @@ footer img {
     margin-left: 5px;
 }
 
-/* New styles for hero image container and overlay */
-.hero-image-container {
-    position: relative;
-    margin-bottom: 30px;
+/* Sidebar layout using CSS Grid */
+.container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout by default */
+    gap: 20px;
 }
 
-.hero-image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
+.sidebar {
+    background-color: #CCCCCC; /* Light Gray */
+    padding: 20px;
 }
 
-.overlay {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 10px 20px;
-    border-radius: 5px;
-    white-space: nowrap;
-    text-align: left;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #000000;
-}
-
-.hero-image-container + h1 {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-/* Styles for section.card to fix color contrast */
-section.card {
+.main-content {
     background-color: #FFFFFF; /* White */
-    color: #000000; /* Black */
     padding: 20px;
     border-radius: 10px;
-    text-align: left;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-section.card h2 {
-    color: #333333; /* Dark Gray */
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-section.card ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-section.card li {
-    margin-bottom: 10px;
-}
-
-section.card li a {
-    color: #0000AA; /* Blue */
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-section.card li a:hover {
-    color: #000000; /* Black */
-}
-
-/* Ensure content does not overlap with images */
-section.card {
-    position: relative;
-    z-index: 10;
-}
-
-.hero-image-container + section.card {
-    margin-top: -30px; /* Adjust as necessary to prevent overlap */
-    padding-top: 30px; /* Adjust as necessary for spacing */
-}
-
-/* Additional styles for larger views */
+/* Media query for larger screens */
 @media (min-width: 768px) {
-    nav {
-        display: flex;
-        justify-content: center;
+    .container {
+        grid-template-columns: 250px 1fr; /* Sidebar and main content */
     }
-  
-    nav a {
-        display: inline-block;
-        margin: 0 10px;
-    }
-
-    main {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    main {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 30px;
-    }
-
-    .card {
-        padding: 30px;
-    }
-
-    ul {
-        list-style-type: none;
-    }
-}
-
-/* Styles for map */
-iframe {
-    margin-top: 30px;
-    width: 100%;
-    height: 450px;
-    border: 0;
 }
