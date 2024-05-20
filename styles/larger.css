@@ -1,3 +1,197 @@
+/* Custom CSS styles */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000000; /* Black */
+    background-color: #AAAAAA; /* Light Gray */
+}
+
+header {
+    background-color: #0000AA; /* Blue */
+    color: #FFFFFF; /* White */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+header span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+nav {
+    background-color: #555555; /* Dark Gray */
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #000000; /* Black */
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+nav a:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background-color: #AAAAAA; /* Light Gray */
+}
+
+nav a.home {
+    background-color: #555555; /* Dark Gray */
+    color: #000000; /* Black */
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 30px;
+}
+
+.card {
+    background-color: #FFFFFF; /* White */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #0000AA; /* Blue */
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: #FFFFFF; /* White */
+    transition: color 0.3s ease;
+    font-size: 1.2rem;
+}
+
+li a:hover {
+    color: #000000; /* Black */
+}
+
+footer {
+    background-color: #0000AA; /* Blue */
+    color: #FFFFFF; /* White */
+    padding: 20px;
+    text-align: center;
+}
+
+footer p:first-child {
+    margin-bottom: 10px;
+}
+
+footer img {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* New styles for hero image container and overlay */
+.hero-image-container {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    white-space: nowrap;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.hero-image-container + h1 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Styles for section.card to fix color contrast */
+section.card {
+    background-color: #0000AA; /* Blue */
+    color: #FFFFFF; /* White */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+section.card h3 {
+    color: #FFFFFF; /* White */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+section.card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section.card li {
+    margin-bottom: 10px;
+}
+
+section.card li a {
+    color: #FFFF55; /* Yellow */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+section.card li a:hover {
+    color: #55FFFF; /* Light Cyan */
+}
+
+/* Ensure content does not overlap with images */
+section.card {
+    position: relative;
+    z-index: 10;
+}
+
+.hero-image-container + section.card {
+    margin-top: -30px; /* Adjust as necessary to prevent overlap */
+    padding-top: 30px; /* Adjust as necessary for spacing */
+}
+
+/* Media queries for larger screens */
 @media (min-width: 768px) {
     nav {
         display: flex;
@@ -26,6 +220,29 @@
 
     ul {
         list-style-type: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .overlay {
+        font-size: 1.2rem; /* Adjust font size for larger screens */
+        padding: 15px 25px; /* Adjust padding for larger screens */
+    }
+
+    .hero-image-container + h1 {
+        font-size: 2.5rem; /* Adjust font size for larger screens */
+    }
+
+    .card h2 {
+        font-size: 2rem; /* Adjust font size for larger screens */
+    }
+
+    .card {
+        padding: 40px; /* Adjust padding for larger screens */
+    }
+
+    nav a {
+        font-size: 1.2rem; /* Adjust font size for larger screens */
     }
 }
 
