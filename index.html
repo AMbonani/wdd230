@@ -28,6 +28,7 @@
         <button id="darkModeToggle">&#9681; Dark Mode</button>
         <button id="hamburgerButton">&#9776;</button>
     </header>
+    
     <nav id="primaryNav">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -38,12 +39,29 @@
     </nav>
 
     <main>
+        <div class="hero-image-container">
+            <picture class="hero-image">
+                <source srcset="images/atlanta2.webp" media="(max-width: 400px)">
+                <source srcset="images/atlantatemple.webp" media="(max-width: 960px)">
+                <img src="images/atlantatemple.webp" alt="Favorite Temple Image">
+            </picture>
+            <div class="overlay">Atlanta Temple</div>
+        </div>
+        <h1>WDD 230: Web Frontend Development</h1>
+
         <section class="card">
             <h2>Learning Activities</h2>
             <ul>
                 <li><a href="week01/holygrail.html">Week 01 - Holy Grail Layout</a></li>
                 <li><a href="week01/media-query.html">Week 01 - Media Queries</a></li>
-                <!-- Other learning activities list items -->
+                <li><a href="week02/design.html">Week 02 Design</a></li>
+                <li><a href="week02/bom.html">Week 02 BOM</a></li>
+                <li><a href="week03/lazyload.html">Week 03 Lazy load</a></li>
+                <li><a href="week04/tablebuild.html">Week 04 Table Build</a></li>
+                <li><a href="week04/thanks.html">Week 04 Thanks</a></li>
+                <li><a href="week04/index.html">Week 04 form Start</a></li>
+                <li><a href="week05/prophets.html">Week 05 Prophets</a></li>
+                <li><a href="week05/weather.html">Week 05 Weather</a></li>
             </ul>
         </section>
 
@@ -56,6 +74,7 @@
         </section>
 
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.406274012599!2d28.2292712!3d-25.7478676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95619cbec65033%3A0xf66262b07a847b4c!2sPretoria!5e0!3m2!1sen!2sza!4v1651869176069!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
     </main>
 
     <footer>
@@ -86,6 +105,7 @@
         darkModeToggle.addEventListener('click', () => {
             mainElement.classList.toggle('dark-mode');
         });
+        
         const visitCounter = document.getElementById('visitCounter');
         let visits = localStorage.getItem('visits') || 0;
         visits = parseInt(visits);
@@ -105,4 +125,5 @@
 </body>
 
 </html>
+
 
