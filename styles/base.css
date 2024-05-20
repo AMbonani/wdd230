@@ -1,4 +1,5 @@
 /* Base CSS styles */
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -59,8 +60,10 @@ nav a.home {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 30px;
 }
 
 .card {
@@ -110,26 +113,121 @@ footer img {
     margin-left: 5px;
 }
 
-iframe {
-    width: 100%;
-    margin-top: 20px; /* Add space between sections */
+/* New styles for hero image container and overlay */
+.hero-image-container {
+    position: relative;
+    margin-bottom: 30px;
 }
 
-/* Media queries for larger screens */
+.hero-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    white-space: nowrap;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.hero-image-container + h1 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Styles for section.card to fix color contrast */
+section.card {
+    background-color: #FFFFFF; /* White */
+    color: #000000; /* Black */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+section.card h2 {
+    color: #333333; /* Dark Gray */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+section.card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section.card li {
+    margin-bottom: 10px;
+}
+
+section.card li a {
+    color: #0000AA; /* Blue */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+section.card li a:hover {
+    color: #000000; /* Black */
+}
+
+/* Ensure content does not overlap with images */
+section.card {
+    position: relative;
+    z-index: 10;
+}
+
+.hero-image-container + section.card {
+    margin-top: -30px; /* Adjust as necessary to prevent overlap */
+    padding-top: 30px; /* Adjust as necessary for spacing */
+}
+
+/* Additional styles for larger views */
 @media (min-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+  
+    nav a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
     main {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
     }
 
     .card {
-        width: calc(50% - 15px); /* Adjust card width for two-column layout with gap */
-        margin-bottom: 20px; /* Add space between cards */
+        padding: 30px;
     }
 
-    iframe {
-        width: 100%;
-        margin-top: 0; /* Remove margin on larger screens */
+    ul {
+        list-style-type: none;
     }
 }
+
+/* Styles for map */
+iframe {
+    margin-top: 30px;
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
