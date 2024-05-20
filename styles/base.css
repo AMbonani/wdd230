@@ -191,3 +191,42 @@ section.card {
     padding-top: 30px; /* Adjust as necessary for spacing */
 }
 
+/* Additional styles for larger views */
+@media (min-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+  
+    nav a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+    }
+
+    .card {
+        padding: 30px;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+}
+
+/* Styles for map */
+iframe {
+    margin-top: 30px;
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
