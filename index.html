@@ -28,7 +28,6 @@
         <button id="darkModeToggle">&#9681; Dark Mode</button>
         <button id="hamburgerButton">&#9776;</button>
     </header>
-    
     <nav id="primaryNav">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -72,10 +71,9 @@
             <img id="weatherIcon" src="placeholder.png" alt="Weather Icon">
             <p>Visits: <span id="visitCounter">0</span></p>
         </section>
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.406274012599!2d28.2292712!3d-25.7478676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95619cbec65033%3A0xf66262b07a847b4c!2sPretoria!5e0!3m2!1sen!2sza!4v1651869176069!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
     </main>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.406274012599!2d28.2292712!3d-25.7478676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95619cbec65033%3A0xf66262b07a847b4c!2sPretoria!5e0!3m2!1sen!2sza!4v1651869176069!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
     <footer>
         <p>&copy; <span id="currentYear"></span> <span id="footerFullName">Abigail Maimela</span> [South Africa]</p>
@@ -85,7 +83,7 @@
     <script src="scripts/getdates.js"></script>
     <script src="scripts/weather.js"></script>
     <script src="scripts/links.js"></script>
-    
+
     <script>
         document.getElementById('fullName').innerText = 'Abigail Maimela';
         document.getElementById('footerFullName').innerText = 'Abigail Maimela';
@@ -105,7 +103,6 @@
         darkModeToggle.addEventListener('click', () => {
             mainElement.classList.toggle('dark-mode');
         });
-        
         const visitCounter = document.getElementById('visitCounter');
         let visits = localStorage.getItem('visits') || 0;
         visits = parseInt(visits);
@@ -125,5 +122,3 @@
 </body>
 
 </html>
-
-
