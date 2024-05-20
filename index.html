@@ -38,13 +38,14 @@
     </nav>
 
     <main>
-        <picture class="hero-image-container">
-            <source srcset="images/atlanta2.webp" media="(max-width: 400px)">
-            <source srcset="images/atlantatemple.webp" media="(max-width: 960px)">
-            <img src="images/atlantatemple.webp" alt="Atlanta Temple">
+        <div class="hero-image-container">
+            <picture class="hero-image">
+                <source srcset="images/atlanta2.webp" media="(max-width: 400px)">
+                <source srcset="images/atlantatemple.webp" media="(max-width: 960px)">
+                <img src="images/atlantatemple.webp" alt="Favorite Temple Image">
+            </picture>
             <div class="overlay">Atlanta Temple</div>
-        </picture>
-
+        </div>
         <h1>WDD 230: Web Frontend Development</h1>
 
         <section class="card">
@@ -102,7 +103,6 @@
         darkModeToggle.addEventListener('click', () => {
             mainElement.classList.toggle('dark-mode');
         });
-
         const visitCounter = document.getElementById('visitCounter');
         let visits = localStorage.getItem('visits') || 0;
         visits = parseInt(visits);
@@ -122,4 +122,5 @@
 </body>
 
 </html>
+
 
