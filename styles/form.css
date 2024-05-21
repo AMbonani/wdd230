@@ -1,13 +1,21 @@
 :root {
     --primary-color: #3498db;
+    --primary-dark-color: #2874a6;
     --font-family: 'Arial', sans-serif;
     --form-padding: 20px;
+    --text-color: #333;
+    --background-color: #fff;
+    --nav-background-color: #444;
+    --nav-text-color: #fff;
+    --button-hover-color: #0c2f46;
 }
 
 body {
     font-family: var(--font-family);
     margin: 0;
     padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 header {
@@ -18,8 +26,8 @@ header {
 }
 
 nav {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--nav-background-color);
+    color: var(--nav-text-color);
     padding: var(--form-padding);
 }
 
@@ -34,6 +42,15 @@ nav li {
     margin-right: 20px;
 }
 
+nav a {
+    color: var(--nav-text-color);
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 main {
     padding: var(--form-padding);
 }
@@ -41,11 +58,17 @@ main {
 form {
     max-width: 400px;
     margin: 0 auto;
+    background-color: var(--background-color);
+    border: 1px solid #ccc;
+    padding: var(--form-padding);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 label {
     display: block;
     margin-bottom: 8px;
+    font-weight: bold;
 }
 
 input,
@@ -55,16 +78,28 @@ select {
     padding: 10px;
     margin-bottom: 15px;
     box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus,
+button:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary-dark-color);
+    box-shadow: 0 0 5px var(--primary-dark-color);
 }
 
 button {
     background-color: var(--primary-color);
     color: #fff;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #0c2f46;
+    background-color: var(--button-hover-color);
 }
 
 footer {
@@ -72,4 +107,8 @@ footer {
     color: #fff;
     text-align: center;
     padding: var(--form-padding);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
+
