@@ -49,3 +49,39 @@
         font-size: 1.2rem; /* Keep font size consistent */
     }
 }
+/* larger.css */
+
+/* Responsive styles for larger screens */
+@media (min-width: 768px) {
+    body {
+        padding: 0 2rem;
+    }
+
+    header {
+        text-align: left;
+        padding: 1rem 2rem;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1rem;
+    }
+
+    nav li {
+        margin-right: 0;
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    form {
+        padding: 2rem;
+    }
+}
