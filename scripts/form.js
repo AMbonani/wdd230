@@ -1,18 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    
+    // Set the current year
     const currentYear = new Date().getFullYear();
     document.getElementById("currentYear").textContent = currentYear;
 
-   
+    // Set the last modified date and time
     const lastModified = new Date(document.lastModified);
     document.getElementById("lastModified").textContent = "Last Modified: " + lastModified.toLocaleString();
 
+    // Password and confirm password fields
     const passwordInput = document.getElementById("password");
     const confirmPasswordInput = document.getElementById("confirmPassword");
-    const emailInput = document.getElementById("email");
-    const form = document.querySelector("form");
 
-   
+    // Check if passwords match
     function checkPasswordMatch() {
         if (passwordInput.value !== confirmPasswordInput.value) {
             confirmPasswordInput.setCustomValidity("Passwords do not match");
@@ -21,25 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-  
+    // Event listener for password confirmation
     confirmPasswordInput.addEventListener("input", checkPasswordMatch);
 
-    
-    const formFields = [passwordInput, confirmPasswordInput, emailInput];
+    // Set required attributes
+    const formFields = [passwordInput, confirmPasswordInput, document.getElementById("email")];
     formFields.forEach(field => {
         field.setAttribute("required", "true");
     });
-
- 
-    const header = document.querySelector("header");
-    const nav = document.querySelector("nav");
-    const footer = document.querySelector("footer");
-
-    const courseHeader = document.querySelector("header");
-    const courseNav = document.querySelector("nav");
-    const courseFooter = document.querySelector("footer");
-
-    header.innerHTML = courseHeader.innerHTML;
-    nav.innerHTML = courseNav.innerHTML;
-    footer.innerHTML = courseFooter.innerHTML;
 });
