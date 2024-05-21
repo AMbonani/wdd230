@@ -1,13 +1,13 @@
 :root {
-    --primary-color: #3498db;
-    --primary-dark-color: #2874a6;
+    --primary-color: #2c3e50; /* Darker blue for better contrast */
+    --primary-dark-color: #1a252f; /* Even darker blue for hover and focus states */
     --font-family: 'Arial', sans-serif;
     --form-padding: 20px;
-    --text-color: #333;
+    --text-color: #000; /* Black text for high contrast */
     --background-color: #fff;
     --nav-background-color: #444;
     --nav-text-color: #fff;
-    --button-hover-color: #0c2f46;
+    --button-hover-color: #34495e; /* Slightly darker for button hover */
 }
 
 body {
@@ -73,6 +73,7 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
+    color: var(--text-color); /* Ensuring label text is black for high contrast */
 }
 
 input,
