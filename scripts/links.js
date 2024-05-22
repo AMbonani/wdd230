@@ -1,48 +1,38 @@
-const baseURL = "https://AMbonani.github.io/wdd230/";
-const linksURL = baseURL + "data/links.json";
+const baseURL = 'https://AMbonani.github.io/wdd230';
+const linksURL = `${baseURL}/links.json`;
 
 async function getLinks() {
-  try {
-    const response = await fetch(linksURL);
-    const data = await response.json();
-    displayLinks(data.weeks);
-  } catch (error) {
-    console.error("Error fetching links:", error);
-  }
-}
+    try {
+        const response = await fetch(linksURL);
+        const data = await response.json();
+        console.log(data); // Test the JSON result by logging it to the console
 
-getLinks();
+        // Call displayLinks to build out the available activity links from the data response
+        displayLinks(data);
+    } catch (error) {
+        console.error('Error fetching links:', error);
+    }
+}
 
 function displayLinks(weeks) {
-  const linksContainer = document.getElementById('learning-activities');
+    const learningActivitiesElement = document.getElementById('learning-activities');
 
-  linksContainer.innerHTML = '';
+    weeks.forEach(week => {
+        const weekItem = document.createElement('li');
+        weekItem.innerHTML = `<strong>${week.week}</strong>`;
 
-  weeks.forEach(week => {
-    const listItem = document.createElement('li');
-    const linkList = document.createElement('ul'); 
+        const linksList = document.createElement('ul');
+        week.links.forEach(link => {
+            const linkItem = document.createElement('li');
+            linkItem.innerHTML = `<a href="${link.url}">${link.title}</a>`;
+            linksList.appendChild(linkItem);
+        });
 
-    week.links.forEach((activity, index) => {
-      const linkItem = document.createElement('li'); 
-      const link = document.createElement('a');
-      link.href = baseURL + activity.url;
-      link.textContent = activity.title;
-
-      linkItem.appendChild(link);
-      linkList.appendChild(linkItem);
-
-      if (index < week.links.length - 1) {
-        const separator = document.createElement('span');
-        separator.textContent = ' | ';
-        listItem.appendChild(separator);
-      }
+        weekItem.appendChild(linksList);
+        learningActivitiesElement.appendChild(weekItem);
     });
-
-    // Set the text content to include week information
-    listItem.textContent = `${week.week}: `;
-    listItem.appendChild(linkList); 
-
-    // Append the modified list item to the container
-    linksContainer.appendChild(listItem);
-  });
 }
+
+// Call the getLinks function to fetch and display the links
+getLinks();
+
