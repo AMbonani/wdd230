@@ -1,48 +1,74 @@
-const baseURL = "https://AMbonani.github.io/wdd230/";
-const linksURL = baseURL + "data/links.json";
-
-async function getLinks() {
-  try {
-    const response = await fetch(linksURL);
-    const data = await response.json();
-    displayLinks(data.weeks);
-  } catch (error) {
-    console.error("Error fetching links:", error);
-  }
+{
+  "weeks": [
+    {
+      "week": "Week 1",
+      "links": [
+        {
+          "url": "week01/holygrail.html",
+          "title": "HG Layout"
+        },
+        {
+          "url": "week01/media-query.html",
+          "title": "mQueries"
+        }
+      ]
+    },
+    {
+      "week": "Week 2",
+      "links": [
+        {
+          "url": "week02/design.html",
+          "title": "Design"
+        },
+        {
+          "url": "week02/bom.html",
+          "title": "BOM"
+        }
+      ]
+    },
+    {
+      "week": "Week 3",
+      "links": [
+        {
+          "url": "week03/lazyload.html",
+          "title": "Lazy Load"
+        }
+      ]
+    },
+    {
+      "week": "Week 4",
+      "links": [
+        {
+          "url": "week04/tablebuild.html",
+          "title": "Table Build"
+        },
+        {
+          "url": "week04/thanks.html",
+          "title": "Thanks"
+        },
+        {
+          "url": "week04/index.html",
+          "title": "Form Start"
+        }
+      ]
+    },
+    {
+      "week": "Week 5",
+      "links": [
+        {
+          "url": "week05/prophets.html",
+          "title": "Prophets"
+        },
+        {
+          "url": "week05/weather.html",
+          "title": "Weather"
+        },
+        {
+          "url": "week05/new-ward-members.json",
+          "title": "Ward Members JSON"
+        }
+      ]
+    }
+  ]
 }
 
-getLinks();
-
-function displayLinks(weeks) {
-  const linksContainer = document.getElementById('learning-activities');
-
-  linksContainer.innerHTML = '';
-
-  weeks.forEach(week => {
-    const listItem = document.createElement('li');
-    const linkList = document.createElement('ul'); 
-
-    week.links.forEach((activity, index) => {
-      const linkItem = document.createElement('li'); 
-      const link = document.createElement('a');
-      link.href = baseURL + activity.url;
-      link.textContent = activity.title;
-
-      linkItem.appendChild(link);
-      linkList.appendChild(linkItem);
-
-      if (index < week.links.length - 1) {
-        const separator = document.createElement('span');
-        separator.textContent = ' | ';
-        listItem.appendChild(separator);
-      }
-    });
-
-    // Set the text content to include week information
-    listItem.textContent = `${week.week}: `;
-    listItem.appendChild(linkList); 
-
-    // Append the modified list item to the container
-    linksContainer.appendChild(listItem);
-  });
-}
