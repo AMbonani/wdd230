@@ -39,5 +39,4 @@ function displayResults(data) {
     weatherIcon.setAttribute('alt', data.weather[0].description);
   
     captionDesc.textContent = `${data.weather[0].description}`;
-  }
-  
+}
