@@ -4,11 +4,11 @@ body {
     margin: 0;
     padding: 0;
     color: #000000; /* Black */
-    background-color: #AAAAAA; /* Light Gray */
+    background-color: #f0f0f0; /* Light Gray */
 }
 
 header {
-    background-color: #0000AA; /* Blue */
+    background-color: #007bff; /* Blue */
     color: #FFFFFF; /* White */
     padding: 20px;
     display: flex;
@@ -34,7 +34,7 @@ header span {
 }
 
 nav {
-    background-color: #333333; /* Darker Gray */
+    background-color: #333333; /* Dark Gray */
     padding: 10px;
     text-align: center;
 }
@@ -59,7 +59,7 @@ nav a:hover {
 }
 
 nav a.home {
-    background-color: #0000AA; /* Blue */
+    background-color: #007bff; /* Blue */
     color: #FFFFFF; /* White */
 }
 
@@ -68,6 +68,7 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     padding: 30px;
+    background-color: #ffffff; /* White */
 }
 
 .card {
@@ -98,11 +99,11 @@ li a {
 }
 
 li a:hover {
-    color: #0000AA; /* Blue */
+    color: #007bff; /* Blue */
 }
 
 footer {
-    background-color: #0000AA; /* Blue */
+    background-color: #007bff; /* Blue */
     color: #FFFFFF; /* White */
     padding: 20px;
     text-align: center;
