@@ -73,11 +73,13 @@
         <p id="lastModified"></p>
     </footer>
 
+    <!-- Include your JavaScript files -->
     <script src="scripts/getdates.js"></script>
     <script src="scripts/weather.js"></script>
     <script src="scripts/links.js"></script>
     
     <script>
+        // This part remains the same as before
         document.getElementById('fullName').innerText = 'Abigail Maimela';
         document.getElementById('footerFullName').innerText = 'Abigail Maimela';
 
@@ -104,15 +106,10 @@
         localStorage.setItem('visits', visits.toString());
         visitCounter.textContent = visits;
 
-        fetch('https://raw.githubusercontent.com/AMbonani/wdd230/main/week05/new-ward-members.json')
-            .then(response => response.json())
-            .then(data => {
-                const wardMembersElement = document.getElementById('wardMembers');
-                wardMembersElement.innerText = JSON.stringify(data, null, 2);
-            })
-            .catch(error => console.error('Error fetching JSON:', error));
+        
     </script>
 
 </body>
 
 </html>
+
