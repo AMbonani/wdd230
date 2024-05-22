@@ -34,7 +34,7 @@ header span {
 }
 
 nav {
-    background-color: #555555; /* Dark Gray */
+    background-color: #333333; /* Darker Gray */
     padding: 10px;
     text-align: center;
 }
@@ -56,12 +56,12 @@ nav a {
 
 nav a:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    background-color: #AAAAAA; /* Light Gray */
+    background-color: #555555; /* Dark Gray */
 }
 
 nav a.home {
-    background-color: #555555; /* Dark Gray */
-    color: #000000; /* Black */
+    background-color: #0000AA; /* Blue */
+    color: #FFFFFF; /* White */
 }
 
 main {
@@ -107,6 +107,9 @@ footer {
     color: #FFFFFF; /* White */
     padding: 20px;
     text-align: center;
+    width: 100%; /* Ensure footer covers the full width */
+    position: relative; /* Ensure it doesn't overlap content */
+    bottom: 0;
 }
 
 footer p:first-child {
@@ -138,6 +141,12 @@ footer img {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     padding-left: 20px; /* Add left padding to prevent images from covering information */
     padding-right: 20px; /* Add right padding to prevent images from covering information */
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #333333; /* Dark Background */
+    color: #FFFFFF; /* Light Text */
 }
 
 /* Media query for larger screens */
