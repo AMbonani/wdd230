@@ -1,5 +1,5 @@
 const baseURL = 'https://AMbonani.github.io/wdd230';
-const linksURL = `${baseURL}/links.json`;
+const linksURL = `${baseURL}/data/links.json`;
 
 async function getLinks() {
     try {
