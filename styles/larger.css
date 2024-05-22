@@ -1,71 +1,18 @@
 /* Media queries for larger screens */
 @media (min-width: 768px) {
-    nav {
-        display: flex;
-        justify-content: center;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 0 10px;
-    }
-
-    main {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 2fr 1fr; /* Update grid layout for larger screens */
-        gap: 30px;
-    }
-
-    .card {
-        padding: 30px; /* Keep padding consistent */
-    }
-
-    ul {
-        list-style-type: none; /* Keep list style consistent */
-    }
-}
-
-@media (min-width: 1024px) {
-    .overlay {
-        font-size: 1.2rem; /* Keep font size consistent */
-        padding: 15px 25px; /* Keep padding consistent */
-    }
-
-    .hero-image-container + h1 {
-        font-size: 2.5rem; /* Keep font size consistent */
-    }
-
-    .card h2 {
-        font-size: 2rem; /* Keep font size consistent */
-    }
-
-    .card {
-        padding: 40px; /* Keep padding consistent */
-    }
-
-    nav a {
-        font-size: 1.2rem; /* Keep font size consistent */
-    }
-}
-/* larger.css */
-
-/* Responsive styles for larger screens */
-@media (min-width: 768px) {
     body {
-        padding: 0 2rem;
+        padding: 0 2rem; /* Adjust body padding for larger screens */
     }
 
     header {
         text-align: left;
-        padding: 1rem 2rem;
+        padding: 1rem 2rem; /* Adjust header padding for larger screens */
     }
 
     nav {
         display: flex;
         justify-content: space-between;
-        padding: 1rem 2rem;
+        padding: 1rem 2rem; /* Adjust nav padding for larger screens */
     }
 
     nav ul {
@@ -74,14 +21,27 @@
     }
 
     nav li {
-        margin-right: 0;
+        margin-right: 0; /* Adjust margin-right for nav items */
     }
 
     main {
-        padding: 2rem;
+        padding: 2rem; /* Adjust main padding for larger screens */
+        max-width: 1200px; /* Set a maximum width for main content */
+        margin: 0 auto; /* Center main content on larger screens */
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* Update grid layout for larger screens */
+        gap: 30px;
     }
 
     form {
-        padding: 2rem;
+        padding: 2rem; /* Adjust form padding for larger screens */
+    }
+
+    .card {
+        padding: 30px; /* Keep padding consistent */
+    }
+
+    ul {
+        list-style-type: none; /* Keep list style consistent */
     }
 }
