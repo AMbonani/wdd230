@@ -156,3 +156,18 @@ footer img {
 }
 
 
+.grid-view .member-card, .list-view .member-list-item {
+  display: block;
+}
+
+.member-card, .member-list-item {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+}
+
+.member-card img, .member-list-item img {
+  max-width: 100px;
+  height: auto;
+}
+
