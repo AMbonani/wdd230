@@ -106,8 +106,8 @@ footer {
     color: #FFFFFF; /* White */
     padding: 20px;
     text-align: center;
-    width: 100%; /* Ensure footer covers the full width */
-    position: relative; /* Ensure it doesn't overlap content */
+    width: 100%; 
+    position: relative;
     bottom: 0;
 }
 
@@ -128,46 +128,3 @@ footer img {
 }
 
 .sidebar {
-    background-color: #CCCCCC; /* Light Gray */
-    padding: 20px;
-    margin-right: 20px; /* Add margin to move sidebar to the left */
-}
-
-.main-content {
-    background-color: #FFFFFF; /* White */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    padding-left: 20px; /* Add left padding to prevent images from covering information */
-    padding-right: 20px; /* Add right padding to prevent images from covering information */
-}
-
-/* Dark Mode Styles */
-.dark-mode {
-    background-color: #333333; /* Dark Background */
-    color: #FFFFFF; /* Light Text */
-}
-
-/* Media query for larger screens */
-@media (min-width: 768px) {
-    .container {
-        grid-template-columns: 250px 1fr; /* Sidebar and main content */
-    }
-}
-
-
-.grid-view .member-card, .list-view .member-list-item {
-  display: block;
-}
-
-.member-card, .member-list-item {
-  border: 1px solid #ccc;
-  margin: 10px;
-  padding: 10px;
-}
-
-.member-card img, .member-list-item img {
-  max-width: 100px;
-  height: auto;
-}
-
