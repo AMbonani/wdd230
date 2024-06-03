@@ -29,6 +29,26 @@
     </header>
 
     <nav>
+       <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory - Abigail Maimela</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/pretoria.PNG" alt="WebP Landscape">
+        <h1 id="fullName">Abigail Maimela</h1>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+    </header>
+
+    <nav>
         <ul>
             <li><a href="home">Home</a></li>
             <li><a href="chamber">Chamber</a></li>
@@ -41,14 +61,6 @@
         <button id="toggleViewButton">Toggle View</button>
         <div id="membersContainer" class="grid-view"></div>
         <div id="membersContainerList" class="list-view"></div>
-
-        <section class="card">
-            <h3>Weather Information</h3>
-            <p id="temperature">Temperature: Loading...</p>
-            <p id="condition">Condition: Loading...</p>
-            <img id="weatherIcon" src="path/to/default/image.png" alt="Weather Icon">
-            <p>Visits: <span id="visitCounter">0</span></p>
-        </section>
     </main>
 
     <footer>
@@ -58,9 +70,59 @@
 
     <script src="scripts/getdates.js"></script>
     <script src="scripts/weather.js"></script>
-    <script src="data/members.js"></script> 
-</body>
+    <script src="data/members.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const membersContainer = document.getElementById('membersContainer');
+            const membersContainerList = document.getElementById('membersContainerList');
+            const toggleViewButton = document.getElementById('toggleViewButton');
 
+            toggleViewButton.addEventListener('click', () => {
+                membersContainer.classList.toggle('grid-view');
+                membersContainer.classList.toggle('list-view');
+                membersContainerList.classList.toggle('grid-view');
+                membersContainerList.classList.toggle('list-view');
+            });
+
+            fetch('data/members.json')
+                .then(response => response.json())
+                .then(data => {
+                    const members = data.members;
+                    members.forEach(member => {
+                        const memberCard = document.createElement('div');
+                        memberCard.classList.add('member-card');
+
+                        memberCard.innerHTML = `
+                            <img src="${member.image}" alt="${member.name}">
+                            <h2>${member.name}</h2>
+                            <p>${member.address}</p>
+                            <p>${member.phone}</p>
+                            <a href="${member.website}">${member.website}</a>
+                            <p>Membership Level: ${member.membership_level}</p>
+                            <p>${member.other_info}</p>
+                        `;
+
+                        membersContainer.appendChild(memberCard);
+
+                        const memberListItem = document.createElement('div');
+                        memberListItem.classList.add('member-list-item');
+
+                        memberListItem.innerHTML = `
+                            <img src="${member.image}" alt="${member.name}">
+                            <h2>${member.name}</h2>
+                            <p>${member.address}</p>
+                            <p>${member.phone}</p>
+                            <a href="${member.website}">${member.website}</a>
+                            <p>Membership Level: ${member.membership_level}</p>
+                            <p>${member.other_info}</p>
+                        `;
+
+                        membersContainerList.appendChild(memberListItem);
+                    });
+                });
+        });
+    </script>
+</body>
 </html>
 
 
