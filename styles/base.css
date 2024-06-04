@@ -40,8 +40,13 @@ nav {
 }
 
 nav ul {
+    display: none;
     list-style-type: none;
     padding: 0;
+}
+
+nav ul.show {
+    display: block;
 }
 
 nav a {
@@ -127,4 +132,14 @@ footer img {
     gap: 20px;
 }
 
-.sidebar {
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+    }
+
+    #menuToggle {
+        display: none;
+    }
+}
+
