@@ -4,16 +4,16 @@ body {
     margin: 0;
     padding: 0;
     color: #000000; /* Black */
-    background-color: #AAAAAA; /* Light Gray */
+    background-color: #F0F0F0; /* Light Gray */
 }
 
 header {
-    background-color: #0000AA; /* Blue */
+    background-color: #004080; /* Darker Blue */
     color: #FFFFFF; /* White */
     padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Adjusted to space-between */
 }
 
 header div {
@@ -22,15 +22,30 @@ header div {
 }
 
 header img {
-    width: 100px; /* Increased width of the hero image */
-    height: 100px; /* Increased height of the hero image */
-    border-radius: 50%;
+    width: 150px; /* Adjusted width of the hero image */
+    height: 100px; /* Adjusted height of the hero image */
+    border-radius: 10px; /* Changed to rounded corners instead of circle */
+    object-fit: cover; /* Ensure image covers the given dimensions */
 }
 
-header span {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
+header h1 {
+    font-size: 2rem; /* Increased font size */
+    margin: 0;
+}
+
+header button {
+    background-color: #FF6600; /* Bright Orange */
+    color: #FFFFFF; /* White */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+header button:hover {
+    background-color: #FF8000; /* Lighter Orange */
 }
 
 nav {
@@ -64,7 +79,7 @@ nav a:hover {
 }
 
 nav a.home {
-    background-color: #0000AA; /* Blue */
+    background-color: #004080; /* Darker Blue */
     color: #FFFFFF; /* White */
 }
 
@@ -103,11 +118,11 @@ li a {
 }
 
 li a:hover {
-    color: #0000AA; /* Blue */
+    color: #004080; /* Darker Blue */
 }
 
 footer {
-    background-color: #0000AA; /* Blue */
+    background-color: #004080; /* Darker Blue */
     color: #FFFFFF; /* White */
     padding: 20px;
     text-align: center;
@@ -133,7 +148,7 @@ footer img {
 }
 
 .sidebar {
-    background-color: #f4f4f4; /* Light Gray */
+    background-color: #E6E6E6; /* Light Gray */
     padding: 20px;
     border-radius: 10px;
 }
@@ -148,6 +163,7 @@ footer img {
     margin: 0;
     overflow: hidden;
     border-radius: 10px;
+    position: relative; /* Required for figcaption positioning */
 }
 
 .photo-gallery img {
@@ -198,5 +214,4 @@ footer img {
         display: none;
     }
 }
-
 
