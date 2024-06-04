@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,10 +16,9 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
-
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
         <h1>The Pretoria Chamber of Commerce</h1>
         <!-- Hamburger Menu Icon -->
@@ -77,36 +75,8 @@
     <footer>
         <p>Contact Information: my@email.com | Phone: (012) 345-5555</p>
         <p>Developed by Abigail Maimela for WDD 230 | Last Modified: <span id="lastModified"></span></p>
-        <script>
-            document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
-        </script>
     </footer>
 
-    <!-- Hamburger Menu Functionality -->
-    <script>
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('show');
-        });
-    </script>
-
-    <!-- Fetch Weather Data -->
-    <script src="scripts/weather.js"></script>
-    <script>
-        async function fetchWeatherData() {
-            try {
-                const response = await fetch('https://api.weatherapi.com/v1/current.json?key=77bf00e20f235f8f556baa0e89701021&q=pretoria');
-                const weatherData = await response.json();
-
-                document.getElementById('temperature').textContent = `Temperature: ${weatherData.current.temp_c}°C`;
-                document.getElementById('condition').textContent = `Condition: ${weatherData.current.condition.text}`;
-                document.getElementById('weatherIcon').src = `https:${weatherData.current.condition.icon}`;
-            } catch (error) {
-                console.error('Error fetching weather data:', error);
-            }
-        }
-
-        fetchWeatherData();
-    </script>
+    <script src="scripts.js"></script>
 </body>
-
 </html>
