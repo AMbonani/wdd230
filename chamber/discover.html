@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Pretoria Chamber of Commerce</title>
-    <meta name="description" content="WDD 230 - Abigail Maimela - The Pretoria Chamber of Commerce form submission.">
+    <title>Discover Pretoria - The Pretoria Chamber of Commerce</title>
+    <meta name="description" content="Discover the beauty and attractions of Pretoria.">
     <meta name="author" content="Abigail Maimela">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="../favicon.ico">
 
-    <meta property="og:title" content="Abigail Maimela - Web Frontend Development">
+    <meta property="og:title" content="Discover Pretoria - Web Frontend Development">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://stock.adobe.com/za/search?k=pretoria%20city">
     <meta property="og:url" content="https://www.holidify.com/places/pretoria/photos.html">
 
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/larger.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
 
     <header>
         <div>
-            <img src="images/pretoria.png" alt="Pretoria Landscape">
+            <img src="../images/pretoria.png" alt="Pretoria Landscape">
             <h1 id="fullName">Abigail Maimela</h1>
         </div>
         <div>
@@ -34,81 +34,69 @@
     
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="chamber">Chamber</a></li>
-            <li><a href="week01/chamber-site-plan.html">Site plan</a></li>
-            <li><a href="form.html">Form</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../chamber">Chamber</a></li>
+            <li><a href="../week01/chamber-site-plan.html">Site plan</a></li>
+            <li><a href="../form.html">Form</a></li>
+            <li><a href="discover.html">Discover</a></li>
         </ul>
     </nav>
 
-    <main>
-        <div class="container">
-            <!-- Sidebar -->
-            <div class="sidebar">
-                <h2>About Pretoria</h2>
-                <p>Pretoria is the administrative capital of South Africa, known for its Jacaranda-lined streets and beautiful gardens.</p>
-                <h3>Demographics</h3>
-                <ul>
-                    <li>Population: 2.4 million (as of 2024)</li>
-                    <li>Official languages: Afrikaans, English, isiNdebele, isiXhosa, isiZulu, Sepedi, Sesotho, Setswana, siSwati, Tshivenda, Xitsonga</li>
-                    <li>Ethnic groups: Black African, White, Coloured, Indian or Asian</li>
-                </ul>
-                <h3>Attractions</h3>
-                <ul>
-                    <li><a href="https://www.tshwane.gov.za/sites/VisitUs/Attractions/Pages/Attractions.aspx" target="_blank">Tshwane Attractions</a></li>
-                    <li><a href="https://www.sa-venues.com/attractionsga/pretoria-metro.htm" target="_blank">Pretoria Metro Attractions</a></li>
-                    <li><a href="https://www.gauteng.net/visit/attractions" target="_blank">Gauteng Attractions</a></li>
-                </ul>
-                <p id="visitMessage"></p>
-            </div>
+    <main class="discover-main">
+        <div class="sidebar">
+            <h2>About Pretoria</h2>
+            <p>Pretoria is the administrative capital of South Africa, known for its Jacaranda-lined streets and beautiful gardens.</p>
+            <h3>Demographics</h3>
+            <ul>
+                <li>Population: 2.4 million (as of 2024)</li>
+                <li>Official languages: Afrikaans, English, isiNdebele, isiXhosa, isiZulu, Sepedi, Sesotho, Setswana, siSwati, Tshivenda, Xitsonga</li>
+                <li>Ethnic groups: Black African, White, Coloured, Indian or Asian</li>
+            </ul>
+            <h3>Attractions</h3>
+            <ul>
+                <li><a href="https://www.tshwane.gov.za/sites/VisitUs/Attractions/Pages/Attractions.aspx" target="_blank">Tshwane Attractions</a></li>
+                <li><a href="https://www.sa-venues.com/attractionsga/pretoria-metro.htm" target="_blank">Pretoria Metro Attractions</a></li>
+                <li><a href="https://www.gauteng.net/visit/attractions" target="_blank">Gauteng Attractions</a></li>
+            </ul>
+            <p id="visitMessage"></p>
+        </div>
 
-            <!-- Photo gallery -->
-            <div class="photo-gallery">
-                <figure>
-                    <img src="images/freedom-park.webp" alt="Freedom Park" loading="lazy">
-                    <figcaption>Freedom Park</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/pretoria-zoo.webp" alt="Pretoria Zoo" loading="lazy">
-                    <figcaption>Pretoria Zoo</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/transvaal-museum.webp" alt="Transvaal Museum" loading="lazy">
-                    <figcaption>Transvaal Museum</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/unionhoreseman.webp" alt="Union Horseman" loading="lazy">
-                    <figcaption>Union Horseman</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/unionbuildings.webp" alt="Union Buildings" loading="lazy">
-                    <figcaption>Union Buildings</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/voortrekker-monument.webp" alt="Voortrekker Monument" loading="lazy">
-                    <figcaption>Voortrekker Monument</figcaption>
-                </figure>
-            </div>
-
-            <!-- Member cards toggle and container -->
-            <div class="toggle-buttons">
-                <button id="toggleGridView">Grid View</button>
-                <button id="toggleListView">List View</button>
-            </div>
-            <div id="memberCards" class="grid-view">
-                <!-- Member cards will be populated here -->
-            </div>
+        <div class="photo-gallery">
+            <figure>
+                <img src="../images/freedom-park.webp" alt="Freedom Park" loading="lazy">
+                <figcaption>Freedom Park</figcaption>
+            </figure>
+            <figure>
+                <img src="../images/pretoria-zoo.webp" alt="Pretoria Zoo" loading="lazy">
+                <figcaption>Pretoria Zoo</figcaption>
+            </figure>
+            <figure>
+                <img src="../images/transvaal-museum.webp" alt="Transvaal Museum" loading="lazy">
+                <figcaption>Transvaal Museum</figcaption>
+            </figure>
+            <figure>
+                <img src="../images/unionhoreseman.webp" alt="Union Horseman" loading="lazy">
+                <figcaption>Union Horseman</figcaption>
+            </figure>
+            <figure>
+                <img src="../images/unionbuildings.webp" alt="Union Buildings" loading="lazy">
+                <figcaption>Union Buildings</figcaption>
+            </figure>
+            <figure>
+                <img src="../images/voortrekker-monument.webp" alt="Voortrekker Monument" loading="lazy">
+                <figcaption>Voortrekker Monument</figcaption>
+            </figure>
         </div>
     </main>
 
-   <footer>
+    <footer>
         <p>Contact Information: my@email.com | Phone: (012) 345-5555</p>
         <p>Developed by Abigail Maimela for WDD 230 | Last Modified: <span id="lastModified"></span></p>
     </footer>
 
-    <script src="scripts/getdates.js"></script>
-    <script src="scripts/discover.js"></script>
-    <script src="scripts/toggleView.js"></script>
+    <script src="../scripts/getdates.js"></script>
+    <script src="../scripts/discover.js"></script>
+    <script src="../scripts/toggleView.js"></script>
 </body>
 
 </html>
