@@ -1,5 +1,3 @@
-// scripts/toggleView.js
-
 document.addEventListener('DOMContentLoaded', () => {
     const toggleGridViewButton = document.getElementById('toggleGridView');
     const toggleListViewButton = document.getElementById('toggleListView');
