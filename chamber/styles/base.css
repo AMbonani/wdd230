@@ -149,4 +149,7 @@
 #darkModeToggle {
     color: #333; 
 }
+#toggleViewButton {
+    color: #333; /* Change the color to a dark gray */
+}
 
