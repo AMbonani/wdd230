@@ -11,6 +11,15 @@
     border-radius: 5px;
 }
 
+.sidebar a {
+    color: #000; /* Change the font color to black */
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
 .photo-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -39,7 +48,7 @@
     position: absolute;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: #000; /* This sets the font color to black */
     width: 100%;
     text-align: center;
     padding: 10px;
@@ -62,6 +71,7 @@
         transform: none;
     }
 }
+
 /* Sidebar layout */
 .discover-main {
     display: grid;
@@ -112,7 +122,7 @@
     position: absolute;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: #000; /* This sets the font color to black */
     width: 100%;
     text-align: center;
     padding: 10px;
@@ -134,4 +144,8 @@
     .photo-gallery figure:hover {
         transform: none;
     }
+}
+/* Toggle icon styling */
+#darkModeToggle {
+    color: blue; /* Change the color to blue 
 }
