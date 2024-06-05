@@ -214,4 +214,13 @@ footer img {
         display: none;
     }
 }
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#membershipBenefits {
+    flex: 1;
+}
 
