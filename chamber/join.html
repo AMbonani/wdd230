@@ -49,43 +49,67 @@
     </nav>
 
     <main>
-        <form action="thankyou.html" method="get">
-            <label for="firstName">Applicant's First Name:</label>
-            <input type="text" id="firstName" name="firstName" required>
+        <div class="form-container">
+            <form action="thankyou.html" method="get">
+                <label for="firstName">Applicant's First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
 
-            <label for="lastName">Applicant's Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required>
+                <label for="lastName">Applicant's Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
 
-            <label for="title">Title or Position:</label>
-            <input type="text" id="title" name="title" pattern="[a-zA-Z\s-]{7,}" title="Only alpha characters, hyphens, and spaces with a minimum of seven characters">
+                <label for="title">Title or Position:</label>
+                <input type="text" id="title" name="title" pattern="[a-zA-Z\s-]{7,}" title="Only alpha characters, hyphens, and spaces with a minimum of seven characters">
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required placeholder="example@byui.edu" pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid email address">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="example@byui.edu" pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid email address">
 
-            <label for="mobileNumber">Mobile Phone Number:</label>
-            <input type="tel" id="mobileNumber" name="mobileNumber" required>
+                <label for="mobileNumber">Mobile Phone Number:</label>
+                <input type="tel" id="mobileNumber" name="mobileNumber" required>
 
-            <label for="organizationName">Business/Organization's Name:</label>
-            <input type="text" id="organizationName" name="organizationName" required>
+                <label for="organizationName">Business/Organization's Name:</label>
+                <input type="text" id="organizationName" name="organizationName" required>
 
-            <label for="membershipLevel">Membership Level:</label>
-            <select id="membershipLevel" name="membershipLevel">
-                <option value="NP">NP Membership (No Fee)</option>
-                <option value="Bronze">Bronze Membership</option>
-                <option value="Silver">Silver Membership</option>
-                <option value="Gold">Gold Membership</option>
-            </select>
+                <label for="membershipLevel">Membership Level:</label>
+                <select id="membershipLevel" name="membershipLevel">
+                    <option value="NP">NP Membership (No Fee)</option>
+                    <option value="Bronze">Bronze Membership</option>
+                    <option value="Silver">Silver Membership</option>
+                    <option value="Gold">Gold Membership</option>
+                </select>
 
-            <label for="organizationDescription">Business/Organization's Description:</label>
-            <textarea id="organizationDescription" name="organizationDescription"></textarea>
+                <label for="organizationDescription">Business/Organization's Description:</label>
+                <textarea id="organizationDescription" name="organizationDescription"></textarea>
 
-            <input type="hidden" id="timestamp" name="timestamp">
+                <input type="hidden" id="timestamp" name="timestamp">
 
-            <button type="submit">Submit</button>
-        </form>
+                <button type="submit">Submit</button>
+            </form>
 
-        <div id="membershipBenefits">
-            <!-- Content for membership benefits -->
+            <div id="membershipBenefits">
+                <h2>Membership Benefits</h2>
+                <h3>NP Membership</h3>
+                <ul>
+                    <li>Access to basic events</li>
+                </ul>
+                <h3>Bronze Membership</h3>
+                <ul>
+                    <li>Access to basic events</li>
+                    <li>Discount on events</li>
+                </ul>
+                <h3>Silver Membership</h3>
+                <ul>
+                    <li>Access to basic events</li>
+                    <li>Discount on events</li>
+                    <li>Access to special training sessions</li>
+                </ul>
+                <h3>Gold Membership</h3>
+                <ul>
+                    <li>Access to basic events</li>
+                    <li>Discount on events</li>
+                    <li>Access to special training sessions</li>
+                    <li>Spotlight advertising on homepage</li>
+                </ul>
+            </div>
         </div>
     </main>
 
@@ -124,6 +148,33 @@
             mainElement.classList.toggle('dark-mode');
         });
     </script>
+
+    <style>
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        #membershipBenefits {
+            flex: 1;
+        }
+
+        @media (min-width: 768px) {
+            .form-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            form {
+                flex: 1;
+            }
+
+            #membershipBenefits {
+                flex: 1;
+                margin-left: 20px;
+            }
+        }
+    </style>
 </body>
 </html>
-
