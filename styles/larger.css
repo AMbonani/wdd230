@@ -45,3 +45,18 @@
         list-style-type: none; /* Keep list style consistent */
     }
 }
+@media (min-width: 768px) {
+    .form-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    form {
+        flex: 1;
+    }
+
+    #membershipBenefits {
+        flex: 1;
+        margin-left: 20px;
+    }
+}
