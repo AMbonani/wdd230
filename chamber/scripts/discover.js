@@ -1,30 +1,27 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Retrieve the last visit date from localStorage
-    var lastVisit = localStorage.getItem('lastVisit');
+// scripts/discover.js
 
-    // Get the current date
-    var currentDate = new Date();
+document.addEventListener('DOMContentLoaded', () => {
+    // Handle last visit message
+    const visitMessageElement = document.getElementById('visitMessage');
+    const lastVisit = localStorage.getItem('lastVisit');
+    const now = Date.now();
+    const oneDay = 24 * 60 * 60 * 1000;
+    
+    if (lastVisit) {
+        const lastVisitDate = new Date(parseInt(lastVisit));
+        const diffTime = now - lastVisitDate;
+        const diffDays = Math.floor(diffTime / oneDay);
 
-    // If this is the first visit, display the welcome message
-    if (!lastVisit) {
-        document.getElementById('visitMessage').textContent = "Welcome! Let us know if you have any questions.";
-    } else {
-        // Calculate the time difference between the last visit date and the current date
-        var timeDiff = currentDate - new Date(lastVisit);
-        var daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-
-        // Display the appropriate message based on the time difference
-        if (daysDiff === 0) {
-            document.getElementById('visitMessage').textContent = "Back so soon! Awesome!";
+        if (diffDays < 1) {
+            visitMessageElement.textContent = 'Back so soon! Awesome!';
+        } else if (diffDays === 1) {
+            visitMessageElement.textContent = 'You last visited 1 day ago.';
         } else {
-            var message = "You last visited " + daysDiff + " day" + (daysDiff === 1 ? "" : "s") + " ago.";
-            document.getElementById('visitMessage').textContent = message;
+            visitMessageElement.textContent = `You last visited ${diffDays} days ago.`;
         }
+    } else {
+        visitMessageElement.textContent = 'Welcome! Let us know if you have any questions.';
     }
 
-    // Update localStorage with the current visit date
-    localStorage.setItem('lastVisit', currentDate.toISOString().split('T')[0]);
-
-    // Display the last modified date in the footer
-    document.getElementById('lastModified').textContent = document.lastModified;
+    localStorage.setItem('lastVisit', now);
 });
