@@ -85,7 +85,7 @@
         </form>
 
         <div id="membershipBenefits">
-            
+            <!-- Content for membership benefits -->
         </div>
     </main>
 
@@ -96,6 +96,24 @@
 
     <script src="../scripts/getdates.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the current date and time to the hidden input field
+            const timestampInput = document.getElementById('timestamp');
+            const currentDate = new Date();
+            timestampInput.value = currentDate.toISOString();
+
+            // Your existing visit counter logic
+            const visitCounter = document.getElementById('visitCounter');
+            let visits = localStorage.getItem('visits') || 0;
+            visits = parseInt(visits);
+            visits++;
+            localStorage.setItem('visits', visits.toString());
+            visitCounter.textContent = visits;
+
+            // Display the last modified date
+            document.getElementById('lastModified').textContent = document.lastModified;
+        });
+
         document.getElementById('fullName').innerText = 'The Pretoria Chamber of Commerce'; 
         document.getElementById('footerFullName').innerText = 'The Pretoria Chamber of Commerce'; 
 
@@ -105,16 +123,7 @@
         darkModeToggle.addEventListener('click', () => {
             mainElement.classList.toggle('dark-mode');
         });
-
-        const visitCounter = document.getElementById('visitCounter');
-        let visits = localStorage.getItem('visits') || 0;
-        visits = parseInt(visits);
-        visits++;
-        localStorage.setItem('visits', visits.toString());
-        visitCounter.textContent = visits;
     </script>
-
 </body>
-
 </html>
 
